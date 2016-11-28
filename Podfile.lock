@@ -1,6 +1,7 @@
 PODS:
   - AFViewShaker (0.0.2)
   - Alamofire (4.0.1)
+  - AMScrollingNavbar (3.0.0)
   - AVOSCloud (3.6.1)
   - AVOSCloudIM (3.6.1):
     - AVOSCloud (= 3.6.1)
@@ -42,6 +43,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - HYBLoopScrollView (3.0.0)
   - IQKeyboardManagerSwift (4.0.6)
   - Kingfisher (3.1.4)
   - Masonry (1.0.2)
@@ -77,6 +79,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.0)
+  - AMScrollingNavbar
   - BKPasscodeView
   - Charts (~> 3.0.0)
   - ChatKit
@@ -85,6 +88,7 @@ DEPENDENCIES:
   - CTAssetsPickerController (~> 3.3.0)
   - DZNEmptyDataSet
   - EAIntroView (~> 2.9.0)
+  - HYBLoopScrollView (~> 3.0.0)
   - IQKeyboardManagerSwift (= 4.0.6)
   - Kingfisher (~> 3.1.0)
   - MWPhotoBrowser
@@ -120,6 +124,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFViewShaker: 7e4bc215ca3e92347b78da436fca74e1730b52e8
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  AMScrollingNavbar: aa894c559c80ffa917d0fdc40d8b42be7c6efe15
   AVOSCloud: cc9b567da2d30f07e3da1e4db682cad9ff56a1b6
   AVOSCloudIM: 7c30a50d1e8f6afee000a2037ea24eb6abcbc8db
   BKPasscodeView: 947e3542c126a9fa41c46318759d928919636e96
@@ -134,6 +139,7 @@ SPEC CHECKSUMS:
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
   FDStackView: 3a4bbe0ce9c35e974246a585168b9da8c32213f1
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  HYBLoopScrollView: ad1dc5709e05ce77e0b1eb4b4fdd0fe55fc8cab2
   IQKeyboardManagerSwift: b3015e819559ca76381f87a0833f44d178564603
   Kingfisher: 6c67e3e57f2d81a9cfdfa25052cd86f33ceac9bb
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -159,6 +165,6 @@ SPEC CHECKSUMS:
   UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
   ValueStepper: a1a275491e3a1ab6fe80a589ce04781d4a795fb3
 
-PODFILE CHECKSUM: c708b83d3544e0db9b8ba0573c3525e1a4927c4a
+PODFILE CHECKSUM: c382e370f9799fd166e59493e0747cc17c0026f8
 
 COCOAPODS: 1.1.1

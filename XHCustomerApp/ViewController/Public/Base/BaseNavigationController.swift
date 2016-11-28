@@ -8,8 +8,9 @@
 
 import UIKit
 import Kingfisher
+import AMScrollingNavbar
 
-class BaseNavigationController: UINavigationController {
+class BaseNavigationController: ScrollingNavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

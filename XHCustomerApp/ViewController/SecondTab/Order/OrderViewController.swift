@@ -76,6 +76,12 @@ class OrderViewController: UIViewController {
         controller2.parentVC = self
         controllerArray.append(controller2)
         
+        let controller3 = OrderListVC()
+        controller3.title = "待抽奖"
+        controller3.parentNavigationController = self.navigationController
+        controller3.parentVC = self
+        controllerArray.append(controller3)
+        
         
         // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 64, width: self.view.frame.width, height: self.view.frame.height - 64), pageMenuOptions: pageMenuParameters)

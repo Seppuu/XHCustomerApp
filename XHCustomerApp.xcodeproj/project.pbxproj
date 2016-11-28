@@ -12,6 +12,10 @@
 		3757E6D01DEC07EA00DF5DC9 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */; };
 		3757E6D11DEC07EA00DF5DC9 /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3757E6CF1DEC07EA00DF5DC9 /* CouponCell.xib */; };
 		3757E6D31DEC0AFC00DF5DC9 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6D21DEC0AFC00DF5DC9 /* Coupon.swift */; };
+		3757E6D71DEC21C800DF5DC9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6D51DEC21C800DF5DC9 /* CategoryCell.swift */; };
+		3757E6D81DEC21C800DF5DC9 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3757E6D61DEC21C800DF5DC9 /* CategoryCell.xib */; };
+		3757E6DA1DEC31A100DF5DC9 /* InfiniteCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6D91DEC31A100DF5DC9 /* InfiniteCollectionView.swift */; };
+		3757E6DD1DEC31F300DF5DC9 /* AutoPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6DC1DEC31F300DF5DC9 /* AutoPagingView.swift */; };
 		378346B41DE7E087005A2EA4 /* DDConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783462F1DE7E087005A2EA4 /* DDConfigs.swift */; };
 		378346B51DE7E087005A2EA4 /* DDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378346301DE7E087005A2EA4 /* DDHelper.swift */; };
 		378346B61DE7E087005A2EA4 /* DDIMConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378346311DE7E087005A2EA4 /* DDIMConfig.swift */; };
@@ -319,6 +323,10 @@
 		3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
 		3757E6CF1DEC07EA00DF5DC9 /* CouponCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
 		3757E6D21DEC0AFC00DF5DC9 /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		3757E6D51DEC21C800DF5DC9 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		3757E6D61DEC21C800DF5DC9 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		3757E6D91DEC31A100DF5DC9 /* InfiniteCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteCollectionView.swift; sourceTree = "<group>"; };
+		3757E6DC1DEC31F300DF5DC9 /* AutoPagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoPagingView.swift; sourceTree = "<group>"; };
 		3783462F1DE7E087005A2EA4 /* DDConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDConfigs.swift; sourceTree = "<group>"; };
 		378346301DE7E087005A2EA4 /* DDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDHelper.swift; sourceTree = "<group>"; };
 		378346311DE7E087005A2EA4 /* DDIMConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDIMConfig.swift; sourceTree = "<group>"; };
@@ -706,6 +714,23 @@
 			path = CouponCell;
 			sourceTree = "<group>";
 		};
+		3757E6D41DEC21B600DF5DC9 /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				3757E6D51DEC21C800DF5DC9 /* CategoryCell.swift */,
+				3757E6D61DEC21C800DF5DC9 /* CategoryCell.xib */,
+			);
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		3757E6DB1DEC31DF00DF5DC9 /* AutoPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				3757E6DC1DEC31F300DF5DC9 /* AutoPagingView.swift */,
+			);
+			path = AutoPagingView;
+			sourceTree = "<group>";
+		};
 		3783462D1DE7E087005A2EA4 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -787,6 +812,7 @@
 		378346511DE7E087005A2EA4 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				3757E6D91DEC31A100DF5DC9 /* InfiniteCollectionView.swift */,
 				378346521DE7E087005A2EA4 /* AMPopTip */,
 				378346611DE7E087005A2EA4 /* ANStepperView */,
 				378346641DE7E087005A2EA4 /* CAPSPageMenu.swift */,
@@ -1614,6 +1640,7 @@
 		378348101DE7E5C7005A2EA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3757E6DB1DEC31DF00DF5DC9 /* AutoPagingView */,
 				378348111DE7E5C7005A2EA4 /* AudioWaves */,
 				378348151DE7E5C7005A2EA4 /* CellMenuSheet */,
 				378348171DE7E5C7005A2EA4 /* Cells */,
@@ -1662,6 +1689,7 @@
 		378348171DE7E5C7005A2EA4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3757E6D41DEC21B600DF5DC9 /* CategoryCell */,
 				3757E6CD1DEC07D200DF5DC9 /* CouponCell */,
 				378679D31DE83DE0003F4E94 /* StarWithTagCell */,
 				378349351DE82558005A2EA4 /* CommentStarCell */,
@@ -2298,6 +2326,7 @@
 				378348EA1DE7E5C7005A2EA4 /* GoodCell.xib in Resources */,
 				3783490C1DE7E5C7005A2EA4 /* CountDown.xib in Resources */,
 				378348F81DE7E5C7005A2EA4 /* SliderCell.xib in Resources */,
+				3757E6D81DEC21C800DF5DC9 /* CategoryCell.xib in Resources */,
 				378347AC1DE7E094005A2EA4 /* CreateTask.storyboard in Resources */,
 				378679D71DE83DF2003F4E94 /* StarWithTagCell.xib in Resources */,
 				378348C61DE7E5C7005A2EA4 /* CustomerCell.xib in Resources */,
@@ -2444,6 +2473,7 @@
 				378347B11DE7E094005A2EA4 /* TaskListVC.swift in Sources */,
 				3783479D1DE7E094005A2EA4 /* MineVC.swift in Sources */,
 				378346B81DE7E087005A2EA4 /* Array+DD.swift in Sources */,
+				3757E6DD1DEC31F300DF5DC9 /* AutoPagingView.swift in Sources */,
 				3783477B1DE7E094005A2EA4 /* MessageListCell.swift in Sources */,
 				3783480B1DE7E09D005A2EA4 /* XHUser.swift in Sources */,
 				378346F41DE7E087005A2EA4 /* PalauDefaults.swift in Sources */,
@@ -2456,6 +2486,7 @@
 				378348FF1DE7E5C7005A2EA4 /* SubscriptionTopCell.swift in Sources */,
 				378347021DE7E087005A2EA4 /* ZWIntroductionViewController.m in Sources */,
 				378346D91DE7E087005A2EA4 /* ANStepperView.m in Sources */,
+				3757E6DA1DEC31A100DF5DC9 /* InfiniteCollectionView.swift in Sources */,
 				378347AF1DE7E094005A2EA4 /* TaskDetailVC.swift in Sources */,
 				378346DF1DE7E087005A2EA4 /* EBBannerView.m in Sources */,
 				3783479E1DE7E094005A2EA4 /* HelpCenterViewController.swift in Sources */,
@@ -2498,6 +2529,7 @@
 				378348BF1DE7E5C7005A2EA4 /* CheckBoxCell.swift in Sources */,
 				378346E61DE7E087005A2EA4 /* FTPopOverMenu.m in Sources */,
 				378347F51DE7E09D005A2EA4 /* CKSessionService.swift in Sources */,
+				3757E6D71DEC21C800DF5DC9 /* CategoryCell.swift in Sources */,
 				378346C41DE7E087005A2EA4 /* UINavigationBar+DD.swift in Sources */,
 				378348001DE7E09D005A2EA4 /* DEMOCustomAutoCompleteObject.m in Sources */,
 				3783478E1DE7E094005A2EA4 /* GoodListVC.swift in Sources */,

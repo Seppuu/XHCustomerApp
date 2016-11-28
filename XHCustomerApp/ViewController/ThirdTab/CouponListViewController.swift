@@ -92,7 +92,6 @@ extension CouponListViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CouponCell

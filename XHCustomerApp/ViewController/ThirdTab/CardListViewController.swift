@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import AMScrollingNavbar
 
 class CardListViewController: BaseTableViewController {
 
@@ -23,7 +24,6 @@ class CardListViewController: BaseTableViewController {
         super.didReceiveMemoryWarning()
         
     }
-    
     
     func getData() {
         let id = 28005

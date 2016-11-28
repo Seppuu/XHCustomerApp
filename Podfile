@@ -13,6 +13,7 @@ pod 'BKPasscodeView'
 pod 'UAProgressView'
 pod 'EAIntroView', '~> 2.9.0'
 pod 'RKTagsView'
+pod 'HYBLoopScrollView', '~> 3.0.0'
 
 #Swift 3.0
 pod 'SwiftyJSON', :git => 'https://github.com/acegreen/SwiftyJSON.git', :branch => 'swift3'
@@ -29,6 +30,7 @@ pod 'ValueStepper'
 pod 'CryptoSwift'
 pod 'swiftScan', :git => 'https://github.com/CNKCQ/swiftScan.git', :branch => 'Swift3.0'
 pod 'Cosmos', '~> 7.0'
+pod 'AMScrollingNavbar'
 
 
 
