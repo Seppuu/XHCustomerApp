@@ -56,6 +56,16 @@ class UserCentreVC: BaseViewController {
         setTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+    
     func setTableView() {
         
         userTableView = UITableView(frame: view.bounds, style: .grouped)
@@ -65,6 +75,8 @@ class UserCentreVC: BaseViewController {
         userTableView.dataSource = self
         
         userTableView.register(UINib(nibName: logOutCellId, bundle: nil), forCellReuseIdentifier: logOutCellId)
+        let offSet = CGPoint(x: 0, y: -24)
+        userTableView.setContentOffset(offSet, animated: false)
     }
     
     
@@ -72,10 +84,7 @@ class UserCentreVC: BaseViewController {
         super.didReceiveMemoryWarning()
         
     }
-    
-    func changeAllContacts() {
-        userTableView.reloadData()
-    }
+
     
 }
 
@@ -122,11 +131,37 @@ extension UserCentreVC:UITableViewDelegate,UITableViewDataSource {
             let cardView = CustomerCardView.instanceFromNib()
             cardView.frame = cell.bounds
             cell.addSubview(cardView)
+            cardView.leftTag.text = "0元"
+            cardView.leftTextLabel.text = "余额"
+            
+            cardView.middleTag.text = "1张"
+            cardView.middleTextLabel.text = "优惠券"
+            
+            cardView.rightTag.text = "3张"
+            cardView.rightTextLabel.text = "卡包"
+            
             
             cardView.nameLabel.text = (user?.displayName)! + " >"
             if let url = URL(string: (user?.avatarURL)!) {
                cardView.avatarImageView.kf.setImage(with: url)
             }
+            
+            cardView.leftPartTapHandler = {
+                
+            }
+            
+            cardView.middlePartTapHandler = {
+                let vc = CouponListViewController()
+                vc.title = "优惠券"
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+            cardView.rightPartTapHandler = {
+                let vc = CardListViewController()
+                vc.title = "卡包"
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
             
             
             return cell

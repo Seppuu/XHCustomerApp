@@ -27,6 +27,10 @@ class CustomerCardView: UIView {
     
     var backButtonHandler:(()->())?
     
+    var leftPartTapHandler:(()->())?
+    var middlePartTapHandler:(()->())?
+    var rightPartTapHandler:(()->())?
+    
     class func instanceFromNib() -> CustomerCardView {
         
         return UINib(nibName: "CustomerCard", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! CustomerCardView
@@ -51,7 +55,41 @@ class CustomerCardView: UIView {
         
         bottomContainer.addSubview(line1)
         
+        self.isUserInteractionEnabled = true
+        bottomContainer.isUserInteractionEnabled = true
         
+        let leftTap = UITapGestureRecognizer(target: self, action: #selector(CustomerCardView.leftTap))
+        let middleTap = UITapGestureRecognizer(target: self, action: #selector(CustomerCardView.middleTap))
+        let rightTap = UITapGestureRecognizer(target: self, action: #selector(CustomerCardView.rightTap))
+        
+        leftTag.isUserInteractionEnabled = true
+        leftTextLabel.isUserInteractionEnabled = true
+        leftTag.addGestureRecognizer(leftTap)
+        leftTextLabel.addGestureRecognizer(leftTap)
+        
+        middleTag.isUserInteractionEnabled = true
+        middleTextLabel.isUserInteractionEnabled = true
+        middleTag.addGestureRecognizer(middleTap)
+        middleTextLabel.addGestureRecognizer(middleTap)
+        
+        rightTag.isUserInteractionEnabled = true
+        rightTextLabel.isUserInteractionEnabled = true
+        rightTag.addGestureRecognizer(rightTap)
+        rightTextLabel.addGestureRecognizer(rightTap)
+        
+        
+    }
+    
+    func leftTap() {
+        leftPartTapHandler?()
+    }
+    
+    func middleTap() {
+        middlePartTapHandler?()
+    }
+    
+    func rightTap() {
+        rightPartTapHandler?()
     }
     
     func backImageViewTap() {

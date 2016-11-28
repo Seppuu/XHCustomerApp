@@ -69,11 +69,12 @@
     
     //Mine VC
     UserCentreVC *thirdVC = [[UserCentreVC alloc] init];
-    
+    BaseNavigationController *thirdNavigationController = [[BaseNavigationController alloc]
+                                                            initWithRootViewController:thirdVC];
     NSArray *viewControllers = @[
                                  firstNavigationController,
                                  secondNavigationController,
-                                 thirdVC
+                                 thirdNavigationController
                                  ];
     return viewControllers;
     
