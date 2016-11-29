@@ -14,7 +14,7 @@ class RecommendVC: BaseViewController {
     
     var tableView:UITableView!
     
-    var categoryCellId = "CategoryCell"
+    var goodCellId = "ContactsCell"
     
     var adsUrlList = [
         "http://a0.att.hudong.com/31/81/19300001363332131674810284674.jpg",
@@ -58,8 +58,13 @@ class RecommendVC: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        let nib0 = UINib(nibName: "categoryCellId", bundle: nil)
-        tableView.register(nib0, forHeaderFooterViewReuseIdentifier: "categoryCellId")
+//        let nib0 = UINib(nibName: "categoryCellId", bundle: nil)
+//        tableView.register(nib0, forHeaderFooterViewReuseIdentifier: "categoryCellId")
+//        
+//        
+        
+        let nib1 = UINib(nibName: goodCellId, bundle: nil)
+        tableView.register(nib1, forCellReuseIdentifier: goodCellId)
     }
     
 
@@ -80,7 +85,7 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
             return 1
         }
         else if section == 2 {
-            return 4
+            return 1
         }
         else {
             return 4
@@ -95,10 +100,10 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
             return 44
         }
         else if indexPath.section == 2 {
-            return 60
+            return 80
         }
         else {
-            return 44
+            return 60
         }
     }
     
@@ -135,16 +140,19 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
             return cell
         }
         else if indexPath.section == 2 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: categoryCellId, for: indexPath) as! CategoryCell
             let cell = UITableViewCell()
+            let meunView = SubscriptionTopView.instanceFromNib()
+            meunView.frame = cell.frame
+            cell.addSubview(meunView)
             
             
             return cell
         }
         else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: categoryCellId, for: indexPath) as! CategoryCell
-            let cell = UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: goodCellId, for: indexPath) as! ContactsCell
             
+            cell.nameLabel.text = "项目名字"
+            cell.avatarImageView.backgroundColor = UIColor.orange
             
             return cell
         }
@@ -152,16 +160,8 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 2 {
-            tableView.reloadData()
-        }
+        
     }
-    
-    
-    
- 
-    
-    
     
     
 }

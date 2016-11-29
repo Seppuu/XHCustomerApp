@@ -10,11 +10,9 @@ import UIKit
 
 class SubscriptionDetailCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var avatarView: UIImageView!
     
-
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +22,7 @@ class SubscriptionDetailCell: UICollectionViewCell {
         avatarView.backgroundColor = UIColor ( red: 0.9312, green: 0.9344, blue: 0.9368, alpha: 1.0 )
         avatarView.layer.cornerRadius = avatarView.ddWidth/2
         avatarView.layer.masksToBounds = true
-        
+    
         avatarView.alpha = 1.0
         
         self.layer.masksToBounds = true

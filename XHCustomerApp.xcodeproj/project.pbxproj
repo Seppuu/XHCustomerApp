@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		370A73811DED290C0095950F /* SUTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 370A737E1DED290C0095950F /* SUTableView.m */; };
 		370A73821DED290C0095950F /* SUTableViewInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 370A73801DED290C0095950F /* SUTableViewInterceptor.m */; };
+		370A738A1DED32DC0095950F /* SubscriptionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370A73841DED32DC0095950F /* SubscriptionDetailCell.swift */; };
+		370A738B1DED32DC0095950F /* SubscriptionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370A73851DED32DC0095950F /* SubscriptionDetailCell.xib */; };
+		370A738E1DED32DC0095950F /* SubscriptionTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370A73881DED32DC0095950F /* SubscriptionTopView.swift */; };
+		370A738F1DED32DC0095950F /* SubscriptionTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370A73891DED32DC0095950F /* SubscriptionTopView.xib */; };
 		3757E6CA1DEBF56A00DF5DC9 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6C91DEBF56A00DF5DC9 /* CardListViewController.swift */; };
 		3757E6CC1DEBF5A900DF5DC9 /* CouponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6CB1DEBF5A900DF5DC9 /* CouponListViewController.swift */; };
 		3757E6D01DEC07EA00DF5DC9 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */; };
@@ -263,12 +267,6 @@
 		378348FA1DE7E5C7005A2EA4 /* StaffPicksCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378348711DE7E5C7005A2EA4 /* StaffPicksCardCell.xib */; };
 		378348FB1DE7E5C7005A2EA4 /* StepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378348731DE7E5C7005A2EA4 /* StepperCell.swift */; };
 		378348FC1DE7E5C7005A2EA4 /* StepperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378348741DE7E5C7005A2EA4 /* StepperCell.xib */; };
-		378348FD1DE7E5C7005A2EA4 /* SubscriptionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378348761DE7E5C7005A2EA4 /* SubscriptionDetailCell.swift */; };
-		378348FE1DE7E5C7005A2EA4 /* SubscriptionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378348771DE7E5C7005A2EA4 /* SubscriptionDetailCell.xib */; };
-		378348FF1DE7E5C7005A2EA4 /* SubscriptionTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378348781DE7E5C7005A2EA4 /* SubscriptionTopCell.swift */; };
-		378349001DE7E5C7005A2EA4 /* SubscriptionTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378348791DE7E5C7005A2EA4 /* SubscriptionTopCell.xib */; };
-		378349011DE7E5C7005A2EA4 /* SubscriptionTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783487A1DE7E5C7005A2EA4 /* SubscriptionTopView.swift */; };
-		378349021DE7E5C7005A2EA4 /* SubscriptionTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3783487B1DE7E5C7005A2EA4 /* SubscriptionTopView.xib */; };
 		378349031DE7E5C7005A2EA4 /* UserAvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783487D1DE7E5C7005A2EA4 /* UserAvatarCell.swift */; };
 		378349041DE7E5C7005A2EA4 /* UserAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3783487E1DE7E5C7005A2EA4 /* UserAvatarCell.xib */; };
 		378349051DE7E5C7005A2EA4 /* UserNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378348801DE7E5C7005A2EA4 /* UserNameCell.swift */; };
@@ -323,6 +321,10 @@
 		370A737E1DED290C0095950F /* SUTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUTableView.m; sourceTree = "<group>"; };
 		370A737F1DED290C0095950F /* SUTableViewInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUTableViewInterceptor.h; sourceTree = "<group>"; };
 		370A73801DED290C0095950F /* SUTableViewInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUTableViewInterceptor.m; sourceTree = "<group>"; };
+		370A73841DED32DC0095950F /* SubscriptionDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailCell.swift; sourceTree = "<group>"; };
+		370A73851DED32DC0095950F /* SubscriptionDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionDetailCell.xib; sourceTree = "<group>"; };
+		370A73881DED32DC0095950F /* SubscriptionTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionTopView.swift; sourceTree = "<group>"; };
+		370A73891DED32DC0095950F /* SubscriptionTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionTopView.xib; sourceTree = "<group>"; };
 		3757E6C91DEBF56A00DF5DC9 /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		3757E6CB1DEBF5A900DF5DC9 /* CouponListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponListViewController.swift; sourceTree = "<group>"; };
 		3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
@@ -629,12 +631,6 @@
 		378348711DE7E5C7005A2EA4 /* StaffPicksCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StaffPicksCardCell.xib; sourceTree = "<group>"; };
 		378348731DE7E5C7005A2EA4 /* StepperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperCell.swift; sourceTree = "<group>"; };
 		378348741DE7E5C7005A2EA4 /* StepperCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepperCell.xib; sourceTree = "<group>"; };
-		378348761DE7E5C7005A2EA4 /* SubscriptionDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailCell.swift; sourceTree = "<group>"; };
-		378348771DE7E5C7005A2EA4 /* SubscriptionDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionDetailCell.xib; sourceTree = "<group>"; };
-		378348781DE7E5C7005A2EA4 /* SubscriptionTopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionTopCell.swift; sourceTree = "<group>"; };
-		378348791DE7E5C7005A2EA4 /* SubscriptionTopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionTopCell.xib; sourceTree = "<group>"; };
-		3783487A1DE7E5C7005A2EA4 /* SubscriptionTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionTopView.swift; sourceTree = "<group>"; };
-		3783487B1DE7E5C7005A2EA4 /* SubscriptionTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionTopView.xib; sourceTree = "<group>"; };
 		3783487D1DE7E5C7005A2EA4 /* UserAvatarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAvatarCell.swift; sourceTree = "<group>"; };
 		3783487E1DE7E5C7005A2EA4 /* UserAvatarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAvatarCell.xib; sourceTree = "<group>"; };
 		378348801DE7E5C7005A2EA4 /* UserNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNameCell.swift; sourceTree = "<group>"; };
@@ -718,6 +714,17 @@
 				370A73801DED290C0095950F /* SUTableViewInterceptor.m */,
 			);
 			path = SUTableView;
+			sourceTree = "<group>";
+		};
+		370A73831DED32DC0095950F /* SubscriptionTopCell */ = {
+			isa = PBXGroup;
+			children = (
+				370A73841DED32DC0095950F /* SubscriptionDetailCell.swift */,
+				370A73851DED32DC0095950F /* SubscriptionDetailCell.xib */,
+				370A73881DED32DC0095950F /* SubscriptionTopView.swift */,
+				370A73891DED32DC0095950F /* SubscriptionTopView.xib */,
+			);
+			path = SubscriptionTopCell;
 			sourceTree = "<group>";
 		};
 		3757E6CD1DEC07D200DF5DC9 /* CouponCell */ = {
@@ -1655,6 +1662,7 @@
 		378348101DE7E5C7005A2EA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				370A73831DED32DC0095950F /* SubscriptionTopCell */,
 				3757E6DB1DEC31DF00DF5DC9 /* AutoPagingView */,
 				378348111DE7E5C7005A2EA4 /* AudioWaves */,
 				378348151DE7E5C7005A2EA4 /* CellMenuSheet */,
@@ -1733,7 +1741,6 @@
 				3783486C1DE7E5C7005A2EA4 /* SliderCell */,
 				3783486F1DE7E5C7005A2EA4 /* StaffPicksCardCell */,
 				378348721DE7E5C7005A2EA4 /* StepperCell */,
-				378348751DE7E5C7005A2EA4 /* SubscriptionTopCell */,
 				3783487C1DE7E5C7005A2EA4 /* UserCenter */,
 				3783487F1DE7E5C7005A2EA4 /* UserNameCell */,
 				378348821DE7E5C7005A2EA4 /* WorkCell */,
@@ -1954,19 +1961,6 @@
 				378348741DE7E5C7005A2EA4 /* StepperCell.xib */,
 			);
 			path = StepperCell;
-			sourceTree = "<group>";
-		};
-		378348751DE7E5C7005A2EA4 /* SubscriptionTopCell */ = {
-			isa = PBXGroup;
-			children = (
-				378348761DE7E5C7005A2EA4 /* SubscriptionDetailCell.swift */,
-				378348771DE7E5C7005A2EA4 /* SubscriptionDetailCell.xib */,
-				378348781DE7E5C7005A2EA4 /* SubscriptionTopCell.swift */,
-				378348791DE7E5C7005A2EA4 /* SubscriptionTopCell.xib */,
-				3783487A1DE7E5C7005A2EA4 /* SubscriptionTopView.swift */,
-				3783487B1DE7E5C7005A2EA4 /* SubscriptionTopView.xib */,
-			);
-			path = SubscriptionTopCell;
 			sourceTree = "<group>";
 		};
 		3783487C1DE7E5C7005A2EA4 /* UserCenter */ = {
@@ -2347,19 +2341,18 @@
 				378348C61DE7E5C7005A2EA4 /* CustomerCell.xib in Resources */,
 				378348CE1DE7E5C7005A2EA4 /* CertificateCell.xib in Resources */,
 				378349151DE7E5C7005A2EA4 /* GoodDetailContainer.xib in Resources */,
+				370A738F1DED32DC0095950F /* SubscriptionTopView.xib in Resources */,
 				378348EE1DE7E5C7005A2EA4 /* HistoryCell.xib in Resources */,
 				378348EC1DE7E5C7005A2EA4 /* HeplerCell.xib in Resources */,
 				378347FF1DE7E09D005A2EA4 /* LCCKLoginViewController.xib in Resources */,
 				378348E01DE7E5C7005A2EA4 /* SegmentCell.xib in Resources */,
 				378349061DE7E5C7005A2EA4 /* UserNameCell.xib in Resources */,
-				378349001DE7E5C7005A2EA4 /* SubscriptionTopCell.xib in Resources */,
 				378346D21DE7E087005A2EA4 /* LICENSE in Resources */,
 				378348C21DE7E5C7005A2EA4 /* ContactsCell.xib in Resources */,
 				378348DC1DE7E5C7005A2EA4 /* ProfileCell.xib in Resources */,
 				37F935F01DE7DBFD006C3CF9 /* Main.storyboard in Resources */,
 				378348DA1DE7E5C7005A2EA4 /* pickerCell.xib in Resources */,
-				378349021DE7E5C7005A2EA4 /* SubscriptionTopView.xib in Resources */,
-				378348FE1DE7E5C7005A2EA4 /* SubscriptionDetailCell.xib in Resources */,
+				370A738B1DED32DC0095950F /* SubscriptionDetailCell.xib in Resources */,
 				378348B61DE7E5C7005A2EA4 /* AddFriendMoreCell.xib in Resources */,
 				3783490E1DE7E5C7005A2EA4 /* CustomerCard.xib in Resources */,
 				378348F41DE7E5C7005A2EA4 /* ReMarkCell.xib in Resources */,
@@ -2474,7 +2467,6 @@
 				378346DE1DE7E087005A2EA4 /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
 				378347A81DE7E094005A2EA4 /* MyWorkVC.swift in Sources */,
 				378347801DE7E094005A2EA4 /* QQScanViewController.swift in Sources */,
-				378348FD1DE7E5C7005A2EA4 /* SubscriptionDetailCell.swift in Sources */,
 				378346FE1DE7E087005A2EA4 /* UIViewController+RESideMenu.m in Sources */,
 				378348E71DE7E5C7005A2EA4 /* FourButtonCell.swift in Sources */,
 				378349311DE81EBC005A2EA4 /* Order.swift in Sources */,
@@ -2498,7 +2490,6 @@
 				378346C61DE7E087005A2EA4 /* UITableView+DD.swift in Sources */,
 				378348041DE7E09D005A2EA4 /* LCCKUtil.m in Sources */,
 				378348BB1DE7E5C7005A2EA4 /* ChannelCell.swift in Sources */,
-				378348FF1DE7E5C7005A2EA4 /* SubscriptionTopCell.swift in Sources */,
 				378347021DE7E087005A2EA4 /* ZWIntroductionViewController.m in Sources */,
 				378346D91DE7E087005A2EA4 /* ANStepperView.m in Sources */,
 				378347AF1DE7E094005A2EA4 /* TaskDetailVC.swift in Sources */,
@@ -2563,6 +2554,7 @@
 				378346B71DE7E087005A2EA4 /* DDUserDefault.swift in Sources */,
 				378348E31DE7E5C7005A2EA4 /* SwitchCell.swift in Sources */,
 				378347AE1DE7E094005A2EA4 /* MemberListVC.swift in Sources */,
+				370A738E1DED32DC0095950F /* SubscriptionTopView.swift in Sources */,
 				3783491D1DE7E5C7005A2EA4 /* ActivityIndicatorTitleView.swift in Sources */,
 				378349051DE7E5C7005A2EA4 /* UserNameCell.swift in Sources */,
 				3783479B1DE7E094005A2EA4 /* CustomerConsumeListVC.swift in Sources */,
@@ -2622,6 +2614,7 @@
 				3757E6D31DEC0AFC00DF5DC9 /* Coupon.swift in Sources */,
 				378348B31DE7E5C7005A2EA4 /* YepWaverView.swift in Sources */,
 				378346CB1DE7E087005A2EA4 /* Once.swift in Sources */,
+				370A738A1DED32DC0095950F /* SubscriptionDetailCell.swift in Sources */,
 				378346CE1DE7E087005A2EA4 /* RealmMigration.swift in Sources */,
 				378346BE1DE7E087005A2EA4 /* String+DD.swift in Sources */,
 				378346BA1DE7E087005A2EA4 /* NSDate+DD.swift in Sources */,
@@ -2638,7 +2631,6 @@
 				378348B91DE7E5C7005A2EA4 /* AlbumSelectCell.swift in Sources */,
 				378346EE1DE7E087005A2EA4 /* MLPAutoCompleteTextField.m in Sources */,
 				3783480A1DE7E09D005A2EA4 /* LCCKTabBarControllerConfig.m in Sources */,
-				378349011DE7E5C7005A2EA4 /* SubscriptionTopView.swift in Sources */,
 				378349111DE7E5C7005A2EA4 /* DDPlaypartRecordAlertView.swift in Sources */,
 				378347111DE7E08D005A2EA4 /* Hepler.swift in Sources */,
 				3783490D1DE7E5C7005A2EA4 /* CountDownView.swift in Sources */,
