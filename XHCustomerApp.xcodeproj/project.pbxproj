@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370A73811DED290C0095950F /* SUTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 370A737E1DED290C0095950F /* SUTableView.m */; };
+		370A73821DED290C0095950F /* SUTableViewInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 370A73801DED290C0095950F /* SUTableViewInterceptor.m */; };
 		3757E6CA1DEBF56A00DF5DC9 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6C91DEBF56A00DF5DC9 /* CardListViewController.swift */; };
 		3757E6CC1DEBF5A900DF5DC9 /* CouponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6CB1DEBF5A900DF5DC9 /* CouponListViewController.swift */; };
 		3757E6D01DEC07EA00DF5DC9 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */; };
@@ -14,7 +16,6 @@
 		3757E6D31DEC0AFC00DF5DC9 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6D21DEC0AFC00DF5DC9 /* Coupon.swift */; };
 		3757E6D71DEC21C800DF5DC9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6D51DEC21C800DF5DC9 /* CategoryCell.swift */; };
 		3757E6D81DEC21C800DF5DC9 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3757E6D61DEC21C800DF5DC9 /* CategoryCell.xib */; };
-		3757E6DA1DEC31A100DF5DC9 /* InfiniteCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6D91DEC31A100DF5DC9 /* InfiniteCollectionView.swift */; };
 		3757E6DD1DEC31F300DF5DC9 /* AutoPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6DC1DEC31F300DF5DC9 /* AutoPagingView.swift */; };
 		378346B41DE7E087005A2EA4 /* DDConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783462F1DE7E087005A2EA4 /* DDConfigs.swift */; };
 		378346B51DE7E087005A2EA4 /* DDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378346301DE7E087005A2EA4 /* DDHelper.swift */; };
@@ -318,6 +319,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		370A737D1DED290C0095950F /* SUTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUTableView.h; sourceTree = "<group>"; };
+		370A737E1DED290C0095950F /* SUTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUTableView.m; sourceTree = "<group>"; };
+		370A737F1DED290C0095950F /* SUTableViewInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUTableViewInterceptor.h; sourceTree = "<group>"; };
+		370A73801DED290C0095950F /* SUTableViewInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUTableViewInterceptor.m; sourceTree = "<group>"; };
 		3757E6C91DEBF56A00DF5DC9 /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		3757E6CB1DEBF5A900DF5DC9 /* CouponListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponListViewController.swift; sourceTree = "<group>"; };
 		3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
@@ -325,7 +330,6 @@
 		3757E6D21DEC0AFC00DF5DC9 /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		3757E6D51DEC21C800DF5DC9 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		3757E6D61DEC21C800DF5DC9 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
-		3757E6D91DEC31A100DF5DC9 /* InfiniteCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteCollectionView.swift; sourceTree = "<group>"; };
 		3757E6DC1DEC31F300DF5DC9 /* AutoPagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoPagingView.swift; sourceTree = "<group>"; };
 		3783462F1DE7E087005A2EA4 /* DDConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDConfigs.swift; sourceTree = "<group>"; };
 		378346301DE7E087005A2EA4 /* DDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDHelper.swift; sourceTree = "<group>"; };
@@ -705,6 +709,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		370A737C1DED290C0095950F /* SUTableView */ = {
+			isa = PBXGroup;
+			children = (
+				370A737D1DED290C0095950F /* SUTableView.h */,
+				370A737E1DED290C0095950F /* SUTableView.m */,
+				370A737F1DED290C0095950F /* SUTableViewInterceptor.h */,
+				370A73801DED290C0095950F /* SUTableViewInterceptor.m */,
+			);
+			path = SUTableView;
+			sourceTree = "<group>";
+		};
 		3757E6CD1DEC07D200DF5DC9 /* CouponCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -812,7 +827,7 @@
 		378346511DE7E087005A2EA4 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				3757E6D91DEC31A100DF5DC9 /* InfiniteCollectionView.swift */,
+				370A737C1DED290C0095950F /* SUTableView */,
 				378346521DE7E087005A2EA4 /* AMPopTip */,
 				378346611DE7E087005A2EA4 /* ANStepperView */,
 				378346641DE7E087005A2EA4 /* CAPSPageMenu.swift */,
@@ -2486,7 +2501,6 @@
 				378348FF1DE7E5C7005A2EA4 /* SubscriptionTopCell.swift in Sources */,
 				378347021DE7E087005A2EA4 /* ZWIntroductionViewController.m in Sources */,
 				378346D91DE7E087005A2EA4 /* ANStepperView.m in Sources */,
-				3757E6DA1DEC31A100DF5DC9 /* InfiniteCollectionView.swift in Sources */,
 				378347AF1DE7E094005A2EA4 /* TaskDetailVC.swift in Sources */,
 				378346DF1DE7E087005A2EA4 /* EBBannerView.m in Sources */,
 				3783479E1DE7E094005A2EA4 /* HelpCenterViewController.swift in Sources */,
@@ -2516,6 +2530,7 @@
 				3783478C1DE7E094005A2EA4 /* FormSettingVC.swift in Sources */,
 				378347B41DE7E094005A2EA4 /* PasswordSettingVC.swift in Sources */,
 				378348DD1DE7E5C7005A2EA4 /* progressCell.swift in Sources */,
+				370A73821DED290C0095950F /* SUTableViewInterceptor.m in Sources */,
 				378347F71DE7E09D005A2EA4 /* LCCKInputViewPluginConversationBackground.m in Sources */,
 				378347FB1DE7E09D005A2EA4 /* LCCKVCardMessageCell.m in Sources */,
 				378347101DE7E08D005A2EA4 /* Form.swift in Sources */,
@@ -2636,6 +2651,7 @@
 				378346EC1DE7E087005A2EA4 /* MIDatePicker.swift in Sources */,
 				378347F61DE7E09D005A2EA4 /* LCCKUser.m in Sources */,
 				378347881DE7E094005A2EA4 /* BaseChartViewController.swift in Sources */,
+				370A73811DED290C0095950F /* SUTableView.m in Sources */,
 				378347AD1DE7E094005A2EA4 /* CreateTaskVC.swift in Sources */,
 				378347131DE7E08D005A2EA4 /* MyWorkManager.swift in Sources */,
 				378349181DE7E5C7005A2EA4 /* NavigationTitleLabel.swift in Sources */,

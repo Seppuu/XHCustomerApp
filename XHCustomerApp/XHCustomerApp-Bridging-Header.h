@@ -26,3 +26,5 @@
 
 #import "ZWIntroductionViewController.h"
 #import "EBForeNotification.h"
+
+#import "SUTableView.h"

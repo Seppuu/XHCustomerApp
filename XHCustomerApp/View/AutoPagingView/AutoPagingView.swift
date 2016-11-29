@@ -10,7 +10,7 @@ import UIKit
 
 class AutoPagingView: UIView {
 
-    var collectionView:InfiniteCollectionView!
+    var tableView:UITableView!
     
     var pagingView = UIView()
     
@@ -20,69 +20,84 @@ class AutoPagingView: UIView {
 
     func makeUI() {
         
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
+        tableView = UITableView(frame: self.frame, style: .plain)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.isPagingEnabled = true
+        tableView.bounces = false
+        tableView.isScrollEnabled = false
+        self.addSubview(tableView)
+        tableView.reloadData()
         
-        collectionView = InfiniteCollectionView(frame: self.frame, collectionViewLayout: layout)
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(AutoPagingView.moveCell), userInfo: nil, repeats: true)
         
-        self.addSubview(collectionView)
+        timer.fire()
+    }
+    
+    var timer:Timer!
+    
+    var currentRow = 0
+    
+    var cellHeight:CGFloat = 44
+    
+    func moveCell() {
         
-//        let nib = UINib(nibName: cellID, bundle: nil)
-//        collectionView.register(nib, forCellWithReuseIdentifier: cellID)
+        if currentRow > 2 {
+            currentRow = 0
+        }
         
-        collectionView.showsHorizontalScrollIndicator = false
+//        let point = CGPoint(x: 0, y: (currentRow * cellHeight))
+//        
+//        tableView.setContentOffset(point, animated: true)
+        let indexPath = IndexPath(row: currentRow, section: 0)
+        var anime = true
+        if currentRow == 0 {
+            anime = false
+        }
+        else {
+            anime = true
+        }
+        tableView.scrollToRow(at: indexPath, at: .top, animated: anime)
         
-        collectionView.reloadData()
+//        let lastIndexPath = IndexPath(row: 2, section: 0)
+//        tableView.moveRow(at: indexPath, to: lastIndexPath)
+        
+        currentRow += 1
         
     }
+   
 }
 
-extension AutoPagingView:UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,InfiniteCollectionViewDataSource {
+extension AutoPagingView:UITableViewDelegate,UITableViewDataSource {
     
-    // MARK: UICollectionView Methods
-    func numberOfItemsInSection(_ section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 80, height: 40)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return 0.0
-        
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellHeight
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.selectionStyle = .none
+        if indexPath.row == 0 {
+            cell.backgroundColor = UIColor.red
+        }
+        else if indexPath.row == 1{
+            cell.backgroundColor = UIColor.blue
+        }
+        else {
+            cell.backgroundColor = UIColor.orange
+        }
         
-        return 0.0
-    }
-    
-    func numberOfItems(collectionView: UICollectionView) -> Int {
-        
-        return 2
-    }
-    
-    func cellForItemAtIndexPath(collectionView: UICollectionView, dequeueIndexPath: NSIndexPath, usableIndexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        let cell = UICollectionViewCell()
-
-        cell.titleLabel.text = titlesArray[(indexPath as NSIndexPath).row]
-
-        //设置时间
         return cell
-        
-        
     }
     
-
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
     
 }
