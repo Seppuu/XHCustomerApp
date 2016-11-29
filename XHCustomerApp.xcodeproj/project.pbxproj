@@ -13,6 +13,10 @@
 		370A738B1DED32DC0095950F /* SubscriptionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370A73851DED32DC0095950F /* SubscriptionDetailCell.xib */; };
 		370A738E1DED32DC0095950F /* SubscriptionTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370A73881DED32DC0095950F /* SubscriptionTopView.swift */; };
 		370A738F1DED32DC0095950F /* SubscriptionTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370A73891DED32DC0095950F /* SubscriptionTopView.xib */; };
+		370A73931DED67480095950F /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370A73911DED67480095950F /* OrderCell.swift */; };
+		370A73941DED67480095950F /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370A73921DED67480095950F /* OrderCell.xib */; };
+		370A73971DED7AC20095950F /* OrderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370A73951DED7AC20095950F /* OrderDetailCell.swift */; };
+		370A73981DED7AC20095950F /* OrderDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370A73961DED7AC20095950F /* OrderDetailCell.xib */; };
 		3757E6CA1DEBF56A00DF5DC9 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6C91DEBF56A00DF5DC9 /* CardListViewController.swift */; };
 		3757E6CC1DEBF5A900DF5DC9 /* CouponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6CB1DEBF5A900DF5DC9 /* CouponListViewController.swift */; };
 		3757E6D01DEC07EA00DF5DC9 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */; };
@@ -129,8 +133,6 @@
 		3783478C1DE7E094005A2EA4 /* FormSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347311DE7E093005A2EA4 /* FormSettingVC.swift */; };
 		3783478D1DE7E094005A2EA4 /* ProdDateSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347341DE7E093005A2EA4 /* ProdDateSetVC.swift */; };
 		3783478E1DE7E094005A2EA4 /* GoodListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347361DE7E093005A2EA4 /* GoodListVC.swift */; };
-		3783478F1DE7E094005A2EA4 /* ProjectPlannedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347381DE7E093005A2EA4 /* ProjectPlannedVC.swift */; };
-		378347901DE7E094005A2EA4 /* ProjectPlanningVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783473A1DE7E093005A2EA4 /* ProjectPlanningVC.swift */; };
 		378347911DE7E094005A2EA4 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783473C1DE7E093005A2EA4 /* GuideViewController.swift */; };
 		378347921DE7E094005A2EA4 /* CodeLoginVerifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783473E1DE7E093005A2EA4 /* CodeLoginVerifyVC.swift */; };
 		378347931DE7E094005A2EA4 /* CodeLoginVerifyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3783473F1DE7E093005A2EA4 /* CodeLoginVerifyVC.xib */; };
@@ -142,20 +144,8 @@
 		378347991DE7E094005A2EA4 /* CustomerCardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783474A1DE7E093005A2EA4 /* CustomerCardDetailVC.swift */; };
 		3783479A1DE7E094005A2EA4 /* CustomerCardListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783474B1DE7E093005A2EA4 /* CustomerCardListVC.swift */; };
 		3783479B1DE7E094005A2EA4 /* CustomerConsumeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783474D1DE7E093005A2EA4 /* CustomerConsumeListVC.swift */; };
-		3783479C1DE7E094005A2EA4 /* CustomerProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783474F1DE7E093005A2EA4 /* CustomerProfileVC.swift */; };
 		3783479D1DE7E094005A2EA4 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347511DE7E093005A2EA4 /* MineVC.swift */; };
 		3783479E1DE7E094005A2EA4 /* HelpCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347531DE7E093005A2EA4 /* HelpCenterViewController.swift */; };
-		378347A01DE7E094005A2EA4 /* DailyFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347591DE7E093005A2EA4 /* DailyFormVC.swift */; };
-		378347A11DE7E094005A2EA4 /* FormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783475A1DE7E093005A2EA4 /* FormVC.swift */; };
-		378347A21DE7E094005A2EA4 /* HelperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783475B1DE7E093005A2EA4 /* HelperVC.swift */; };
-		378347A31DE7E094005A2EA4 /* CustomerManagerSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783475D1DE7E093005A2EA4 /* CustomerManagerSelectVC.swift */; };
-		378347A41DE7E094005A2EA4 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783475F1DE7E093005A2EA4 /* ScheduleVC.swift */; };
-		378347A51DE7E094005A2EA4 /* MyWorkDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347601DE7E093005A2EA4 /* MyWorkDetailVC.swift */; };
-		378347A61DE7E094005A2EA4 /* MyWorkListHepler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347611DE7E093005A2EA4 /* MyWorkListHepler.swift */; };
-		378347A71DE7E094005A2EA4 /* MyWorkListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347621DE7E093005A2EA4 /* MyWorkListVC.swift */; };
-		378347A81DE7E094005A2EA4 /* MyWorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347631DE7E093005A2EA4 /* MyWorkVC.swift */; };
-		378347A91DE7E094005A2EA4 /* GoodDetailListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347651DE7E093005A2EA4 /* GoodDetailListVC.swift */; };
-		378347AA1DE7E094005A2EA4 /* GoodProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347661DE7E093005A2EA4 /* GoodProfileVC.swift */; };
 		378347AB1DE7E094005A2EA4 /* NoticeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378347681DE7E093005A2EA4 /* NoticeListVC.swift */; };
 		378347AC1DE7E094005A2EA4 /* CreateTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3783476B1DE7E093005A2EA4 /* CreateTask.storyboard */; };
 		378347AD1DE7E094005A2EA4 /* CreateTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783476C1DE7E093005A2EA4 /* CreateTaskVC.swift */; };
@@ -255,8 +245,6 @@
 		378348EE1DE7E5C7005A2EA4 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378348601DE7E5C7005A2EA4 /* HistoryCell.xib */; };
 		378348EF1DE7E5C7005A2EA4 /* MyWorkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378348611DE7E5C7005A2EA4 /* MyWorkCell.swift */; };
 		378348F01DE7E5C7005A2EA4 /* MyWorkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378348621DE7E5C7005A2EA4 /* MyWorkCell.xib */; };
-		378348F11DE7E5C7005A2EA4 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378348641DE7E5C7005A2EA4 /* OrderCell.swift */; };
-		378348F21DE7E5C7005A2EA4 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378348651DE7E5C7005A2EA4 /* OrderCell.xib */; };
 		378348F31DE7E5C7005A2EA4 /* ReMarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378348671DE7E5C7005A2EA4 /* ReMarkCell.swift */; };
 		378348F41DE7E5C7005A2EA4 /* ReMarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378348681DE7E5C7005A2EA4 /* ReMarkCell.xib */; };
 		378348F51DE7E5C7005A2EA4 /* SheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783486A1DE7E5C7005A2EA4 /* SheetCell.swift */; };
@@ -325,6 +313,10 @@
 		370A73851DED32DC0095950F /* SubscriptionDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionDetailCell.xib; sourceTree = "<group>"; };
 		370A73881DED32DC0095950F /* SubscriptionTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionTopView.swift; sourceTree = "<group>"; };
 		370A73891DED32DC0095950F /* SubscriptionTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionTopView.xib; sourceTree = "<group>"; };
+		370A73911DED67480095950F /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		370A73921DED67480095950F /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		370A73951DED7AC20095950F /* OrderDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailCell.swift; sourceTree = "<group>"; };
+		370A73961DED7AC20095950F /* OrderDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetailCell.xib; sourceTree = "<group>"; };
 		3757E6C91DEBF56A00DF5DC9 /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		3757E6CB1DEBF5A900DF5DC9 /* CouponListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponListViewController.swift; sourceTree = "<group>"; };
 		3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
@@ -473,8 +465,6 @@
 		378347311DE7E093005A2EA4 /* FormSettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSettingVC.swift; sourceTree = "<group>"; };
 		378347341DE7E093005A2EA4 /* ProdDateSetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdDateSetVC.swift; sourceTree = "<group>"; };
 		378347361DE7E093005A2EA4 /* GoodListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodListVC.swift; sourceTree = "<group>"; };
-		378347381DE7E093005A2EA4 /* ProjectPlannedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectPlannedVC.swift; sourceTree = "<group>"; };
-		3783473A1DE7E093005A2EA4 /* ProjectPlanningVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectPlanningVC.swift; sourceTree = "<group>"; };
 		3783473C1DE7E093005A2EA4 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		3783473E1DE7E093005A2EA4 /* CodeLoginVerifyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeLoginVerifyVC.swift; sourceTree = "<group>"; };
 		3783473F1DE7E093005A2EA4 /* CodeLoginVerifyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CodeLoginVerifyVC.xib; sourceTree = "<group>"; };
@@ -486,20 +476,8 @@
 		3783474A1DE7E093005A2EA4 /* CustomerCardDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerCardDetailVC.swift; sourceTree = "<group>"; };
 		3783474B1DE7E093005A2EA4 /* CustomerCardListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerCardListVC.swift; sourceTree = "<group>"; };
 		3783474D1DE7E093005A2EA4 /* CustomerConsumeListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerConsumeListVC.swift; sourceTree = "<group>"; };
-		3783474F1DE7E093005A2EA4 /* CustomerProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerProfileVC.swift; sourceTree = "<group>"; };
 		378347511DE7E093005A2EA4 /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
 		378347531DE7E093005A2EA4 /* HelpCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCenterViewController.swift; sourceTree = "<group>"; };
-		378347591DE7E093005A2EA4 /* DailyFormVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyFormVC.swift; sourceTree = "<group>"; };
-		3783475A1DE7E093005A2EA4 /* FormVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormVC.swift; sourceTree = "<group>"; };
-		3783475B1DE7E093005A2EA4 /* HelperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperVC.swift; sourceTree = "<group>"; };
-		3783475D1DE7E093005A2EA4 /* CustomerManagerSelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerManagerSelectVC.swift; sourceTree = "<group>"; };
-		3783475F1DE7E093005A2EA4 /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
-		378347601DE7E093005A2EA4 /* MyWorkDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWorkDetailVC.swift; sourceTree = "<group>"; };
-		378347611DE7E093005A2EA4 /* MyWorkListHepler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWorkListHepler.swift; sourceTree = "<group>"; };
-		378347621DE7E093005A2EA4 /* MyWorkListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWorkListVC.swift; sourceTree = "<group>"; };
-		378347631DE7E093005A2EA4 /* MyWorkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWorkVC.swift; sourceTree = "<group>"; };
-		378347651DE7E093005A2EA4 /* GoodDetailListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodDetailListVC.swift; sourceTree = "<group>"; };
-		378347661DE7E093005A2EA4 /* GoodProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodProfileVC.swift; sourceTree = "<group>"; };
 		378347681DE7E093005A2EA4 /* NoticeListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeListVC.swift; sourceTree = "<group>"; };
 		3783476B1DE7E093005A2EA4 /* CreateTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateTask.storyboard; sourceTree = "<group>"; };
 		3783476C1DE7E093005A2EA4 /* CreateTaskVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskVC.swift; sourceTree = "<group>"; };
@@ -619,8 +597,6 @@
 		378348601DE7E5C7005A2EA4 /* HistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		378348611DE7E5C7005A2EA4 /* MyWorkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWorkCell.swift; sourceTree = "<group>"; };
 		378348621DE7E5C7005A2EA4 /* MyWorkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyWorkCell.xib; sourceTree = "<group>"; };
-		378348641DE7E5C7005A2EA4 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
-		378348651DE7E5C7005A2EA4 /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		378348671DE7E5C7005A2EA4 /* ReMarkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReMarkCell.swift; sourceTree = "<group>"; };
 		378348681DE7E5C7005A2EA4 /* ReMarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReMarkCell.xib; sourceTree = "<group>"; };
 		3783486A1DE7E5C7005A2EA4 /* SheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetCell.swift; sourceTree = "<group>"; };
@@ -725,6 +701,17 @@
 				370A73891DED32DC0095950F /* SubscriptionTopView.xib */,
 			);
 			path = SubscriptionTopCell;
+			sourceTree = "<group>";
+		};
+		370A73901DED672E0095950F /* OrderCell */ = {
+			isa = PBXGroup;
+			children = (
+				370A73911DED67480095950F /* OrderCell.swift */,
+				370A73921DED67480095950F /* OrderCell.xib */,
+				370A73951DED7AC20095950F /* OrderDetailCell.swift */,
+				370A73961DED7AC20095950F /* OrderDetailCell.xib */,
+			);
+			path = OrderCell;
 			sourceTree = "<group>";
 		};
 		3757E6CD1DEC07D200DF5DC9 /* CouponCell */ = {
@@ -1187,8 +1174,6 @@
 			children = (
 				378347331DE7E093005A2EA4 /* ProdDateSetVC */,
 				378347351DE7E093005A2EA4 /* ProjectListVC */,
-				378347371DE7E093005A2EA4 /* ProjectPlannedVC */,
-				378347391DE7E093005A2EA4 /* ProjectPlanningVC */,
 			);
 			path = Good;
 			sourceTree = "<group>";
@@ -1207,22 +1192,6 @@
 				378347361DE7E093005A2EA4 /* GoodListVC.swift */,
 			);
 			path = ProjectListVC;
-			sourceTree = "<group>";
-		};
-		378347371DE7E093005A2EA4 /* ProjectPlannedVC */ = {
-			isa = PBXGroup;
-			children = (
-				378347381DE7E093005A2EA4 /* ProjectPlannedVC.swift */,
-			);
-			path = ProjectPlannedVC;
-			sourceTree = "<group>";
-		};
-		378347391DE7E093005A2EA4 /* ProjectPlanningVC */ = {
-			isa = PBXGroup;
-			children = (
-				3783473A1DE7E093005A2EA4 /* ProjectPlanningVC.swift */,
-			);
-			path = ProjectPlanningVC;
 			sourceTree = "<group>";
 		};
 		3783473B1DE7E093005A2EA4 /* Guide */ = {
@@ -1275,7 +1244,6 @@
 			children = (
 				378347491DE7E093005A2EA4 /* Customer */,
 				3783474C1DE7E093005A2EA4 /* CustomerConsumeListVC */,
-				3783474E1DE7E093005A2EA4 /* CustomerProfileVC */,
 				378347501DE7E093005A2EA4 /* MineVC */,
 			);
 			path = People;
@@ -1298,14 +1266,6 @@
 			path = CustomerConsumeListVC;
 			sourceTree = "<group>";
 		};
-		3783474E1DE7E093005A2EA4 /* CustomerProfileVC */ = {
-			isa = PBXGroup;
-			children = (
-				3783474F1DE7E093005A2EA4 /* CustomerProfileVC.swift */,
-			);
-			path = CustomerProfileVC;
-			sourceTree = "<group>";
-		};
 		378347501DE7E093005A2EA4 /* MineVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1326,61 +1286,10 @@
 			isa = PBXGroup;
 			children = (
 				3783492B1DE80909005A2EA4 /* Order */,
-				378347571DE7E093005A2EA4 /* Hepler */,
-				3783475C1DE7E093005A2EA4 /* MyWorkVC */,
 				378347671DE7E093005A2EA4 /* NoticeListVC */,
 				378347691DE7E093005A2EA4 /* Task */,
 			);
 			path = SecondTab;
-			sourceTree = "<group>";
-		};
-		378347571DE7E093005A2EA4 /* Hepler */ = {
-			isa = PBXGroup;
-			children = (
-				378347581DE7E093005A2EA4 /* FormVC */,
-				3783475B1DE7E093005A2EA4 /* HelperVC.swift */,
-			);
-			path = Hepler;
-			sourceTree = "<group>";
-		};
-		378347581DE7E093005A2EA4 /* FormVC */ = {
-			isa = PBXGroup;
-			children = (
-				378347591DE7E093005A2EA4 /* DailyFormVC.swift */,
-				3783475A1DE7E093005A2EA4 /* FormVC.swift */,
-			);
-			path = FormVC;
-			sourceTree = "<group>";
-		};
-		3783475C1DE7E093005A2EA4 /* MyWorkVC */ = {
-			isa = PBXGroup;
-			children = (
-				3783475D1DE7E093005A2EA4 /* CustomerManagerSelectVC.swift */,
-				3783475E1DE7E093005A2EA4 /* MarketWork */,
-				378347601DE7E093005A2EA4 /* MyWorkDetailVC.swift */,
-				378347611DE7E093005A2EA4 /* MyWorkListHepler.swift */,
-				378347621DE7E093005A2EA4 /* MyWorkListVC.swift */,
-				378347631DE7E093005A2EA4 /* MyWorkVC.swift */,
-				378347641DE7E093005A2EA4 /* ProjectProfileVCList */,
-			);
-			path = MyWorkVC;
-			sourceTree = "<group>";
-		};
-		3783475E1DE7E093005A2EA4 /* MarketWork */ = {
-			isa = PBXGroup;
-			children = (
-				3783475F1DE7E093005A2EA4 /* ScheduleVC.swift */,
-			);
-			path = MarketWork;
-			sourceTree = "<group>";
-		};
-		378347641DE7E093005A2EA4 /* ProjectProfileVCList */ = {
-			isa = PBXGroup;
-			children = (
-				378347651DE7E093005A2EA4 /* GoodDetailListVC.swift */,
-				378347661DE7E093005A2EA4 /* GoodProfileVC.swift */,
-			);
-			path = ProjectProfileVCList;
 			sourceTree = "<group>";
 		};
 		378347671DE7E093005A2EA4 /* NoticeListVC */ = {
@@ -1712,6 +1621,7 @@
 		378348171DE7E5C7005A2EA4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				370A73901DED672E0095950F /* OrderCell */,
 				3757E6D41DEC21B600DF5DC9 /* CategoryCell */,
 				3757E6CD1DEC07D200DF5DC9 /* CouponCell */,
 				378679D31DE83DE0003F4E94 /* StarWithTagCell */,
@@ -1735,7 +1645,6 @@
 				3783485E1DE7E5C7005A2EA4 /* HistoryCell */,
 				378348611DE7E5C7005A2EA4 /* MyWorkCell.swift */,
 				378348621DE7E5C7005A2EA4 /* MyWorkCell.xib */,
-				378348631DE7E5C7005A2EA4 /* OrderViewCell */,
 				378348661DE7E5C7005A2EA4 /* ReMarkCell */,
 				378348691DE7E5C7005A2EA4 /* SheetCell */,
 				3783486C1DE7E5C7005A2EA4 /* SliderCell */,
@@ -1907,15 +1816,6 @@
 				378348601DE7E5C7005A2EA4 /* HistoryCell.xib */,
 			);
 			path = HistoryCell;
-			sourceTree = "<group>";
-		};
-		378348631DE7E5C7005A2EA4 /* OrderViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				378348641DE7E5C7005A2EA4 /* OrderCell.swift */,
-				378348651DE7E5C7005A2EA4 /* OrderCell.xib */,
-			);
-			path = OrderViewCell;
 			sourceTree = "<group>";
 		};
 		378348661DE7E5C7005A2EA4 /* ReMarkCell */ = {
@@ -2299,7 +2199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				378348F61DE7E5C7005A2EA4 /* SheetCell.xib in Resources */,
-				378348F21DE7E5C7005A2EA4 /* OrderCell.xib in Resources */,
 				378348C01DE7E5C7005A2EA4 /* checkBoxCell.xib in Resources */,
 				378349391DE826B2005A2EA4 /* CommentStarCell.xib in Resources */,
 				378348D81DE7E5C7005A2EA4 /* formCell.xib in Resources */,
@@ -2342,6 +2241,7 @@
 				378348CE1DE7E5C7005A2EA4 /* CertificateCell.xib in Resources */,
 				378349151DE7E5C7005A2EA4 /* GoodDetailContainer.xib in Resources */,
 				370A738F1DED32DC0095950F /* SubscriptionTopView.xib in Resources */,
+				370A73941DED67480095950F /* OrderCell.xib in Resources */,
 				378348EE1DE7E5C7005A2EA4 /* HistoryCell.xib in Resources */,
 				378348EC1DE7E5C7005A2EA4 /* HeplerCell.xib in Resources */,
 				378347FF1DE7E09D005A2EA4 /* LCCKLoginViewController.xib in Resources */,
@@ -2355,6 +2255,7 @@
 				370A738B1DED32DC0095950F /* SubscriptionDetailCell.xib in Resources */,
 				378348B61DE7E5C7005A2EA4 /* AddFriendMoreCell.xib in Resources */,
 				3783490E1DE7E5C7005A2EA4 /* CustomerCard.xib in Resources */,
+				370A73981DED7AC20095950F /* OrderDetailCell.xib in Resources */,
 				378348F41DE7E5C7005A2EA4 /* ReMarkCell.xib in Resources */,
 				378348DE1DE7E5C7005A2EA4 /* progressCell.xib in Resources */,
 				378348071DE7E09D005A2EA4 /* CustomizedChatKitOther.bundle in Resources */,
@@ -2426,7 +2327,6 @@
 			files = (
 				378346DB1DE7E087005A2EA4 /* CYLPlusButton.m in Sources */,
 				378346E11DE7E087005A2EA4 /* EBForeNotification.m in Sources */,
-				378347A91DE7E094005A2EA4 /* GoodDetailListVC.swift in Sources */,
 				378347161DE7E08D005A2EA4 /* RealmUser.swift in Sources */,
 				378347B51DE7E094005A2EA4 /* UserCentreVC.swift in Sources */,
 				378346F31DE7E087005A2EA4 /* PalauDefaultable.swift in Sources */,
@@ -2453,25 +2353,19 @@
 				378346F11DE7E087005A2EA4 /* OTPageView.m in Sources */,
 				378346C81DE7E087005A2EA4 /* UIViewController+DD.swift in Sources */,
 				378346FB1DE7E087005A2EA4 /* RAReorderableLayout.swift in Sources */,
-				378347A51DE7E094005A2EA4 /* MyWorkDetailVC.swift in Sources */,
-				378347A11DE7E094005A2EA4 /* FormVC.swift in Sources */,
 				3783490B1DE7E5C7005A2EA4 /* ChattingTableView.swift in Sources */,
 				378347811DE7E094005A2EA4 /* ScanResultController.swift in Sources */,
 				3757E6D01DEC07EA00DF5DC9 /* CouponCell.swift in Sources */,
 				378348ED1DE7E5C7005A2EA4 /* HistoryCell.swift in Sources */,
-				378347A71DE7E094005A2EA4 /* MyWorkListVC.swift in Sources */,
-				378347A21DE7E094005A2EA4 /* HelperVC.swift in Sources */,
 				378346EB1DE7E087005A2EA4 /* LTInfiniteScrollView.swift in Sources */,
 				378347FE1DE7E09D005A2EA4 /* LCCKLoginViewController.m in Sources */,
 				378348021DE7E09D005A2EA4 /* LCCKLoginDataSource.m in Sources */,
 				378346DE1DE7E087005A2EA4 /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
-				378347A81DE7E094005A2EA4 /* MyWorkVC.swift in Sources */,
 				378347801DE7E094005A2EA4 /* QQScanViewController.swift in Sources */,
 				378346FE1DE7E087005A2EA4 /* UIViewController+RESideMenu.m in Sources */,
 				378348E71DE7E5C7005A2EA4 /* FourButtonCell.swift in Sources */,
 				378349311DE81EBC005A2EA4 /* Order.swift in Sources */,
 				378346D11DE7E087005A2EA4 /* UserManager.swift in Sources */,
-				378347AA1DE7E094005A2EA4 /* GoodProfileVC.swift in Sources */,
 				378346E41DE7E087005A2EA4 /* UIImage+ColorAtPoint.m in Sources */,
 				378346F21DE7E087005A2EA4 /* PalauCustomDefaultable.swift in Sources */,
 				378349381DE826B2005A2EA4 /* CommentStarCell.swift in Sources */,
@@ -2481,6 +2375,7 @@
 				3783479D1DE7E094005A2EA4 /* MineVC.swift in Sources */,
 				378346B81DE7E087005A2EA4 /* Array+DD.swift in Sources */,
 				3757E6DD1DEC31F300DF5DC9 /* AutoPagingView.swift in Sources */,
+				370A73971DED7AC20095950F /* OrderDetailCell.swift in Sources */,
 				3783477B1DE7E094005A2EA4 /* MessageListCell.swift in Sources */,
 				3783480B1DE7E09D005A2EA4 /* XHUser.swift in Sources */,
 				378346F41DE7E087005A2EA4 /* PalauDefaults.swift in Sources */,
@@ -2506,8 +2401,6 @@
 				378348031DE7E09D005A2EA4 /* LCCKMapViewController.m in Sources */,
 				378346BD1DE7E087005A2EA4 /* NSUserDefaults+DD.swift in Sources */,
 				37F935ED1DE7DBFD006C3CF9 /* ViewController.swift in Sources */,
-				378347A61DE7E094005A2EA4 /* MyWorkListHepler.swift in Sources */,
-				3783479C1DE7E094005A2EA4 /* CustomerProfileVC.swift in Sources */,
 				3783491B1DE7E5C7005A2EA4 /* ProdDateSetTableView.swift in Sources */,
 				378348BD1DE7E5C7005A2EA4 /* ChannelListCell.swift in Sources */,
 				378346F01DE7E087005A2EA4 /* OTPageScrollView.m in Sources */,
@@ -2527,7 +2420,6 @@
 				378347101DE7E08D005A2EA4 /* Form.swift in Sources */,
 				378346CF1DE7E087005A2EA4 /* NetworkManager.swift in Sources */,
 				378346B61DE7E087005A2EA4 /* DDIMConfig.swift in Sources */,
-				378347A31DE7E094005A2EA4 /* CustomerManagerSelectVC.swift in Sources */,
 				378349341DE824D7005A2EA4 /* CommentVC.swift in Sources */,
 				378347FC1DE7E09D005A2EA4 /* LCCKVCardView.m in Sources */,
 				378347911DE7E094005A2EA4 /* GuideViewController.swift in Sources */,
@@ -2540,17 +2432,14 @@
 				378348001DE7E09D005A2EA4 /* DEMOCustomAutoCompleteObject.m in Sources */,
 				3783478E1DE7E094005A2EA4 /* GoodListVC.swift in Sources */,
 				378349031DE7E5C7005A2EA4 /* UserAvatarCell.swift in Sources */,
-				378348F11DE7E5C7005A2EA4 /* OrderCell.swift in Sources */,
 				378348D71DE7E5C7005A2EA4 /* formCell.swift in Sources */,
 				378348011DE7E09D005A2EA4 /* DEMODataSource.m in Sources */,
 				378346B51DE7E087005A2EA4 /* DDHelper.swift in Sources */,
 				37F935EB1DE7DBFD006C3CF9 /* AppDelegate.swift in Sources */,
-				378347A41DE7E094005A2EA4 /* ScheduleVC.swift in Sources */,
 				378348EB1DE7E5C7005A2EA4 /* HeplerCell.swift in Sources */,
 				378346DA1DE7E087005A2EA4 /* CAPSPageMenu.swift in Sources */,
 				3783477C1DE7E094005A2EA4 /* MessageListModel.swift in Sources */,
 				3783477E1DE7E094005A2EA4 /* XHStackedChartViewController.swift in Sources */,
-				378347A01DE7E094005A2EA4 /* DailyFormVC.swift in Sources */,
 				378346B71DE7E087005A2EA4 /* DDUserDefault.swift in Sources */,
 				378348E31DE7E5C7005A2EA4 /* SwitchCell.swift in Sources */,
 				378347AE1DE7E094005A2EA4 /* MemberListVC.swift in Sources */,
@@ -2590,7 +2479,6 @@
 				378348C31DE7E5C7005A2EA4 /* ConversationCell.swift in Sources */,
 				3783491E1DE7E5C7005A2EA4 /* TrackingTableView.swift in Sources */,
 				378348F51DE7E5C7005A2EA4 /* SheetCell.swift in Sources */,
-				3783478F1DE7E094005A2EA4 /* ProjectPlannedVC.swift in Sources */,
 				378349071DE7E5C7005A2EA4 /* WorkCell.swift in Sources */,
 				378346E51DE7E087005A2EA4 /* UILabel+ContentSize.m in Sources */,
 				378348D91DE7E5C7005A2EA4 /* pickerCell.swift in Sources */,
@@ -2601,6 +2489,7 @@
 				378346FC1DE7E087005A2EA4 /* RECommonFunctions.m in Sources */,
 				378679D91DE85C49003F4E94 /* Tag.swift in Sources */,
 				378346D51DE7E087005A2EA4 /* AMPopTip+Draw.m in Sources */,
+				370A73931DED67480095950F /* OrderCell.swift in Sources */,
 				378348EF1DE7E5C7005A2EA4 /* MyWorkCell.swift in Sources */,
 				378348B71DE7E5C7005A2EA4 /* AddFriendSearchCell.swift in Sources */,
 				378679D61DE83DF2003F4E94 /* StarWithTagCell.swift in Sources */,
@@ -2651,7 +2540,6 @@
 				378348051DE7E09D005A2EA4 /* LCCKContactManager.m in Sources */,
 				378346D71DE7E087005A2EA4 /* AMPopTip+Exit.m in Sources */,
 				3783490F1DE7E5C7005A2EA4 /* CustomerCardView.swift in Sources */,
-				378347901DE7E094005A2EA4 /* ProjectPlanningVC.swift in Sources */,
 				378346B91DE7E087005A2EA4 /* Dictionary+DD.swift in Sources */,
 				378348CB1DE7E5C7005A2EA4 /* BasicInfoCell.swift in Sources */,
 				378349091DE7E5C7005A2EA4 /* chatSectionView.swift in Sources */,

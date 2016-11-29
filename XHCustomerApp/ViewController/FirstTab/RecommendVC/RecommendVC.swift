@@ -94,7 +94,7 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 100
+            return 150
         }
         else if indexPath.section == 1 {
             return 44
@@ -108,17 +108,24 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 || section == 1 {
-            return 0.01
+        if section == 2  {
+            return 5.0
         }
-        return 8.0
+        else if section == 1 {
+            return 5.0
+        }
+        return 0.001
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.001
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
             let cell = UITableViewCell()
-            let frame = CGRect(x: 0, y: 0, width: self.view.ddWidth, height: 100)
+            let frame = CGRect(x: 0, y: 0, width: self.view.ddWidth, height: 150)
             if let loopView = HYBLoopScrollView(frame: frame, imageUrls: adsUrlList, timeInterval: 10.0, didSelect: { [weak self] (idnex) in
                 if let strongSelf = self {
                 }

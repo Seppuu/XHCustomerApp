@@ -132,59 +132,6 @@ class ChatKitExample: LCChatKitExample {
     }
     
     
-    override func lcck_setupConversationsCellOperation() {
-        
-        //选中某个对话后的回调,设置事件响应函数
-        LCChatKit.sharedInstance().didSelectConversationsListCellBlock = {
-            (indexPath,conversation,controller) in
-            //conversation?.markAsReadInBackground()
-            
-            if let conv = conversation {
-                if let lastMessage = conv.lcck_lastMessage {
-
-                    if let attr = lastMessage.attributes {
-
-                        if let noticeType = attr["notice_type"] as? String {
-                            if noticeType == "daily_report" || noticeType == "project_plan" {
-                                let vc = HelperVC()
-                                vc.title = "助手"
-                                LCChatKitExample.lcck_push(to: vc)
-                            }
-                            else {
-                                let vc = NoticeListVC()
-                                vc.title = "提醒"
-                                LCChatKitExample.lcck_push(to: vc)
-                            }
-                            //设置当前对话,为了消除未读标记.chatKit默认点击系统消息进入会话界面.
-                            LCChatKit.sharedInstance().conversationService.currentConversation = conversation
-                            LCChatKit.sharedInstance().conversationService.updateConversationAsRead()
-
-                            return
-                        }
-                    }
-                    else {
-                        
-                    }
-                    
-                    
-                }
-            
-        }
-            
-            //非系统消息,选中某个对话后的回调,设置事件响应函数
-            ChatKitExample.exampleOpenConversationViewController(withConversaionId: conversation?.conversationId, from: controller?.navigationController)
-            
-        }
-        
-        //删除某个对话后的回调 (一般不需要做处理)
-        LCChatKit.sharedInstance().didDeleteConversationsListCellBlock = {
-            (indexPath,conversation,controller) in
-            //TODO:
-        }
-
-    }
-    
-    
     override func lcck_setFetchProfiles() {
         
         LCChatKit.sharedInstance().fetchProfilesBlock = {
@@ -340,99 +287,11 @@ class ChatKitExample: LCChatKitExample {
             let error = NSError(domain: classString, code: code, userInfo: errorInfo)
             
             completionHandler!(false, error)
- 
-        }
-        
-    }
-    
-    //会话点击左右头像
-    override func lcck_exampleOpenProfile(forUser user: LCCKUserDelegate!, userId: String!, parentController: UIViewController!) {
-        let clientId = userId
-        if let user = User.getUserBy(clientId!) {
-            
-            if let id = user.userId.toInt() {
-                NetworkManager.sharedManager.getEmployeeDetailWith(id, completion: { (success, json, error) in
-                    // hud.hide(true)
-                    if success == true {
-                        let vc = EmployeeProfileVC()
-                        vc.isShowRightBar = false
-                        vc.title = "详细资料"
-                        vc.type = .employee
-                        vc.profileJSON = json!
-                        vc.profileDetailJSON = json!
-                        
-                        parentController.navigationController?.pushViewController(vc, animated: true)
-                    }
-                    
-                })
-            }
-        }
-        
-        
-    }
-    
-    //会话点击右上icon,进入详细资料.
-    override func lcck_setupOpenConversation() {
-        
-        LCChatKit.sharedInstance().fetchConversationHandler = {
-            (conversation,aConversationController) in
-            
-            if conversation?.createAt == nil {return}
-            
-            if conversation?.members == nil {return}
-            
-            if ((conversation?.members?.count)! > 2) {
-                super.lcck_setupOpenConversation()
-            }
-            else if conversation?.members?.count == 2 {
-                
-                aConversationController?.configureBarButtonItemStyle(.singleProfile, action: { (sender, event) in
-                    
-                   // let hud = showHudWith(aConversationController.view, animated: true, mode: .Indeterminate, text: "")
-                    if let memebers = conversation?.members as? [String] {
-                        let currentUserClientId = LCChatKit.sharedInstance().clientId
-                        var clientId = ""
-                        
-                        memebers.forEach({ (id) in
-                            if id != currentUserClientId {
-                                clientId = id
-                            }
-                        })
-                        
-                        if let user = User.getUserBy(clientId) {
-                            
-                            if let id = user.userId.toInt() {
-                                NetworkManager.sharedManager.getEmployeeDetailWith(id, completion: { (success, json, error) in
-                                   // hud.hide(true)
-                                    if success == true {
-                                        let vc = EmployeeProfileVC()
-                                        vc.isShowRightBar = false
-                                        vc.title = "详细资料"
-                                        vc.type = .employee
-                                        vc.profileJSON = json!
-                                        vc.profileDetailJSON = json!
-                                        
-                                        aConversationController?.navigationController?.pushViewController(vc, animated: true)
-                                    }
-                                    
-                                })
-                            }
-                        }
-                        
-                    }
-                    
-                })
-                
-                
-            }
-            else {
-                
-            }
+
             
         }
         
     }
-    
    
 }
 

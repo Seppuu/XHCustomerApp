@@ -21,7 +21,7 @@ class OrderListVC: UIViewController,DZNEmptyDataSetSource, DZNEmptyDataSetDelega
         
     }
     
-    
+    var cellId = "OrderCell"
     
     func setTableView() {
         
@@ -30,8 +30,10 @@ class OrderListVC: UIViewController,DZNEmptyDataSetSource, DZNEmptyDataSetDelega
         tableView.dataSource = self
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
-        
         view.addSubview(tableView)
+        
+        let nib = UINib(nibName: cellId, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: cellId)
         
     }
     
@@ -62,20 +64,32 @@ class OrderListVC: UIViewController,DZNEmptyDataSetSource, DZNEmptyDataSetDelega
 extension OrderListVC:UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return 130
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 8.0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.001
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "订单"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! OrderCell
+        cell.avatarImageView.backgroundColor = UIColor.init(hexString: "4A90E2")
+        cell.selectionStyle = .none
+        cell.nameLabel.text = "项目名称"
+        cell.tagLabel.text = "待付款"
         
         return cell
     }

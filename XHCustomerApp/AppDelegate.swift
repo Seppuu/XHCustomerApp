@@ -253,61 +253,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func pushToViewControllerWith(_ data:[AnyHashable: Any]) {
         
-        
-        if let userInfo = data as? [String : AnyObject] {
-            
-            if let type =  userInfo["notice_type"] as? String {
-                if type == "daily_report" {
-                    
-                    if let time = userInfo["notice_time"] as? String {
-                        
-                        Defaults.MessageListHelperLastTime.value = time
-                    }
-                    
-                    let viewController = window?.visibleViewController!
-                    let vc = DailyFormVC()
-                    
-                    if let noticeId = userInfo["notice_id"] as? String {
-                        
-                        vc.noticeId = noticeId.toInt()!
-                        vc.title = "日报表"
-                        viewController!.navigationController?.pushViewController(vc, animated: true)
-                    }
-                    
-                    
-                }
-                else if type == "project_plan" {
-                    
-                    if let time = userInfo["notice_time"] as? String {
-                        
-                        Defaults.MessageListHelperLastTime.value = time
-                    }
-                    
-                    let viewController = window?.visibleViewController!
-                    let vc = MyWorkVC()
-                    vc.title = "我的工作"
-                    viewController!.navigationController?.pushViewController(vc, animated: true)
-                }
-                else if type == "common_notice" {
-                    
-                    if let time = userInfo["notice_time"] as? String {
-                        
-                        Defaults.MessageListRemiandLastTime.value = time
-                    }
-                    
-                }
-                else {
-                    
-                }
-                
-            }
-            
-            
-        }
-        else {
-            
-        }
-        
     }
     
 }

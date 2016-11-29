@@ -34,6 +34,8 @@ class Order: NSObject {
     
     var status = OrderStatus.wait
     
+    var detailList = [OrderDetail]()
+    
     var customerName = ""
     var orgName = ""//门店
     var goodNo = ""
@@ -46,4 +48,11 @@ class Order: NSObject {
     var numbers = ""
     var isProd = false
     
+    
+}
+
+class OrderDetail: NSObject {
+    
+    var name = ""
+    var count = 0
 }
