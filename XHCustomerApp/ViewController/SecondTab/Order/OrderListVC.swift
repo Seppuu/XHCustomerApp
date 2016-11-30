@@ -29,7 +29,8 @@ class OrderListVC: UIViewController,DZNEmptyDataSetSource, DZNEmptyDataSetDelega
     
     func setTableView() {
         
-        tableView = UITableView(frame: view.bounds, style: .grouped)
+        //减去上(64)下(49)高度,和navBar下面的view(40) 高度
+        tableView = UITableView(frame: CGRect(x: 0, y: 0, width: screenWidth, height:view.ddHeight - 64 - 40  - 49), style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.emptyDataSetSource = self
@@ -67,7 +68,7 @@ class OrderListVC: UIViewController,DZNEmptyDataSetSource, DZNEmptyDataSetDelega
         
         var count = 1
         
-        for i in 0...2 {
+        for i in 0...4 {
             
             let order = Order()
             order.name = "项目名称"

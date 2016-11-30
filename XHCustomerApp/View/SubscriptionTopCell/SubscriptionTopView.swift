@@ -73,9 +73,9 @@ class SubscriptionTopView: UIView,UICollectionViewDelegate,UICollectionViewDeleg
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! SubscriptionDetailCell
         
-        cell.avatarView.backgroundColor = UIColor.lightGray
+        cell.avatarView.backgroundColor = UIColor.ddViewBackGroundColor()
         
-        let text = String(indexPath.row + 1)
+        let text = "项目分类" + String(indexPath.row + 1)
         cell.nameLabel.text = text
         
         return cell

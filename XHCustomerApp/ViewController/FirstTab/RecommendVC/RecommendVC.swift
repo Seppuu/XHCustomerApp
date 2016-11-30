@@ -103,7 +103,7 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
             return 80
         }
         else {
-            return 60
+            return 80
         }
     }
     
@@ -126,13 +126,14 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
         if indexPath.section == 0 {
             let cell = UITableViewCell()
             let frame = CGRect(x: 0, y: 0, width: self.view.ddWidth, height: 150)
-            if let loopView = HYBLoopScrollView(frame: frame, imageUrls: adsUrlList, timeInterval: 10.0, didSelect: { [weak self] (idnex) in
+            if let loopView = HYBLoopScrollView(frame: frame, imageUrls: adsUrlList, timeInterval: 3.0, didSelect: { [weak self] (idnex) in
                 if let strongSelf = self {
                 }
             }, didScroll: { [weak self](index) in
                 if let strongSelf = self {
                 }
             }) {
+                loopView.shouldAutoClipImageToViewSize = true
                 cell.addSubview(loopView)
             }
             
@@ -152,14 +153,13 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
             meunView.frame = cell.frame
             cell.addSubview(meunView)
             
-            
             return cell
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: goodCellId, for: indexPath) as! ContactsCell
             
             cell.nameLabel.text = "项目名字"
-            cell.avatarImageView.backgroundColor = UIColor.orange
+            cell.avatarImageView.backgroundColor = UIColor.ddViewBackGroundColor()
             
             return cell
         }
