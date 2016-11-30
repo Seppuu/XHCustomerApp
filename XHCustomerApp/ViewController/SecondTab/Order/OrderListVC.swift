@@ -19,7 +19,11 @@ class OrderListVC: UIViewController,DZNEmptyDataSetSource, DZNEmptyDataSetDelega
         view.backgroundColor = UIColor.ddViewBackGroundColor()
         setTableView()
         
+        makeData()
+        
     }
+    
+    var orderList = [Order]()
     
     var cellId = "OrderCell"
     
@@ -58,13 +62,48 @@ class OrderListVC: UIViewController,DZNEmptyDataSetSource, DZNEmptyDataSetDelega
     func emptyDataSetShouldDisplay(_ scrollView: UIScrollView!) -> Bool {
         return hasLoadData
     }
+    
+    func makeData() {
+        
+        var count = 1
+        
+        for i in 0...2 {
+            
+            let order = Order()
+            order.name = "项目名称"
+            order.status = .perchase
+            
+            if i == 0 {
+                count = 1
+            }
+            else if i == 1{
+                count = 2
+            }
+            else {
+                count = 3
+            }
+            
+            for _ in 0...count {
+                
+                let detail = OrderDetail()
+                detail.name = "名字"
+                detail.count = 2
+                order.detailList.append(detail)
+            }
+            
+            orderList.append(order)
+        }
+        
+        
+        tableView.reloadData()
+    }
 
 }
 
 extension OrderListVC:UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return orderList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,7 +111,9 @@ extension OrderListVC:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
+        //注意这里是使用了sectio,而不是row
+        let order = orderList[indexPath.section].detailList
+        return 70 + CGFloat(order.count) * 20
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -90,6 +131,10 @@ extension OrderListVC:UITableViewDelegate,UITableViewDataSource {
         cell.selectionStyle = .none
         cell.nameLabel.text = "项目名称"
         cell.tagLabel.text = "待付款"
+        
+        //注意这里是使用了sectio,而不是row
+        let order = orderList[indexPath.section]
+        cell.order = order
         
         return cell
     }

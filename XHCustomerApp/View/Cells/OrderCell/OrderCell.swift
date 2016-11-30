@@ -23,7 +23,11 @@ class OrderCell: UITableViewCell {
     
     @IBOutlet weak var bottomLabel: UILabel!
     
-    var order = Order()
+    var order = Order() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     var cellId = "OrderDetailCell"
     
@@ -41,12 +45,12 @@ class OrderCell: UITableViewCell {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.bounces = false
+        tableView.isScrollEnabled = false
+        
         
         let nib = UINib(nibName: cellId, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellId)
         tableView.separatorStyle = .none
-        tableView.reloadData()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -63,8 +67,9 @@ extension OrderCell: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return order.detailList.count
-        return 3
+        
+        return order.detailList.count
+    
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -75,10 +80,10 @@ extension OrderCell: UITableViewDelegate,UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! OrderDetailCell
         cell.selectionStyle = .none
-        
-        cell.nameLabel.text = "项目" + String(indexPath.row)
+        let detail = order.detailList[indexPath.row]
+        cell.nameLabel.text = detail.name + String(indexPath.row)
 
-        cell.rightLabel.text = "X3"
+        cell.rightLabel.text = String(detail.count)
         
         return cell
         

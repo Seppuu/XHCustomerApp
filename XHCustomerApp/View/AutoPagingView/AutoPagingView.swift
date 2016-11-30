@@ -17,7 +17,20 @@ class AutoPagingView: UIView {
     override func didMoveToSuperview() {
         makeUI()
     }
-
+    
+    var data = ["1","2","3","4"]
+    
+    var loopData:[String] {
+        var arr = [String]()
+        
+        arr = data
+        if let first = data.first {
+           arr.append(first)
+        }
+        
+        return arr
+        
+    }
     func makeUI() {
         
         tableView = UITableView(frame: self.frame, style: .plain)
@@ -40,29 +53,33 @@ class AutoPagingView: UIView {
     
     var cellHeight:CGFloat = 44
     
+    var isLoopEnd = false
+    
     func moveCell() {
         
-        if currentRow > 2 {
-            currentRow = 0
+        if currentRow == loopData.count - 1 {
+            
+            let indexPath = IndexPath(row: currentRow, section: 0)
+            tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+            isLoopEnd = true
+            return
         }
         
-//        let point = CGPoint(x: 0, y: (currentRow * cellHeight))
-//        
-//        tableView.setContentOffset(point, animated: true)
         let indexPath = IndexPath(row: currentRow, section: 0)
-        var anime = true
-        if currentRow == 0 {
-            anime = false
-        }
-        else {
-            anime = true
-        }
-        tableView.scrollToRow(at: indexPath, at: .top, animated: anime)
-        
-//        let lastIndexPath = IndexPath(row: 2, section: 0)
-//        tableView.moveRow(at: indexPath, to: lastIndexPath)
-        
+        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+
         currentRow += 1
+        
+    }
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        if isLoopEnd == true {
+            currentRow = 0
+            let indexPath0 = IndexPath(row: currentRow, section: 0)
+            tableView.scrollToRow(at: indexPath0, at: .top, animated: false)
+            currentRow += 1
+            isLoopEnd = false
+        }
         
     }
    
@@ -75,7 +92,7 @@ extension AutoPagingView:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return loopData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -85,15 +102,13 @@ extension AutoPagingView:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.selectionStyle = .none
-        if indexPath.row == 0 {
-            cell.backgroundColor = UIColor.red
-        }
-        else if indexPath.row == 1{
-            cell.backgroundColor = UIColor.blue
-        }
-        else {
-            cell.backgroundColor = UIColor.orange
-        }
+        
+        let l = UILabel(frame: cell.frame)
+        cell.addSubview(l)
+        l.text = loopData[indexPath.row]
+        l.textColor = UIColor.blue
+        l.textAlignment = .center
+        l.font = UIFont.systemFont(ofSize: 12)
         
         return cell
     }

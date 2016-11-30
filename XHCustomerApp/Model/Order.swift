@@ -33,7 +33,7 @@ enum OrderStatus:Int {
 class Order: NSObject {
     
     var status = OrderStatus.wait
-    
+    var name = ""
     var detailList = [OrderDetail]()
     
     var customerName = ""
