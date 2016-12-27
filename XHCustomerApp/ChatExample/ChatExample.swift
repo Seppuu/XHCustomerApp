@@ -18,15 +18,11 @@ class ChatKitExample: LCChatKitExample {
         return allUserIds
     }
     
-
     override func exampleInit() {
         
         super.exampleInit()
         
-       
-        
     }
-    
     
     //监听,LCCKNotificationConversationListDataSourceUpdated来获取最新的最近消息列表IDs.保存至服务器
     func addSaveConvIdNoti() {

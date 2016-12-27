@@ -63,9 +63,7 @@ class LoginViewController: UIViewController {
         //setNavBarItem()
         setNoti()
         setSubView()
-        
-        
-        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,7 +93,7 @@ class LoginViewController: UIViewController {
     var phoneTextField:UITextField!
     var passWordTextField:UITextField!
     
-    var tryButton:UIButton!
+    var signInButton:UIButton!
     var loginButton:UIButton!
     
     var helpLabel:UILabel!
@@ -162,14 +160,14 @@ class LoginViewController: UIViewController {
             make.height.equalTo(40)
         }
         
-//        tryButton = UIButton()
-//        view.addSubview(tryButton)
-//        tryButton.setTitle("试用", forState: .Normal)
-//        tryButton.setTitleColor(UIColor.init(hexString: "928181"), forState: .Normal)
-//        tryButton.backgroundColor = UIColor.init(hexString: "E5DED1")
-//        tryButton.addTarget(self, action: #selector(LoginViewController.loginWithTry), forControlEvents: .TouchUpInside)
-//        tryButton.layer.cornerRadius = 5
-//        tryButton.layer.masksToBounds = true
+        signInButton = UIButton()
+        view.addSubview(signInButton)
+        signInButton.setTitle("注册", for: .normal)
+        signInButton.setTitleColor(UIColor.init(hexString: "928181"), for: .normal)
+        signInButton.backgroundColor = UIColor.init(hexString: "E5DED1")
+        signInButton.addTarget(self, action: #selector(LoginViewController.signIn), for: .touchUpInside)
+        signInButton.layer.cornerRadius = 5
+        signInButton.layer.masksToBounds = true
         
         loginButton = UIButton()
         view.addSubview(loginButton)
@@ -183,35 +181,36 @@ class LoginViewController: UIViewController {
         
         let buttonWidth = (screenWidth - 30 - 10) / 2
         
-//        tryButton.snp_makeConstraints { (make) in
-//            make.top.equalTo(passWordTextField.snp_bottom).offset(30)
-//            make.left.equalTo(view).offset(15)
-//            make.width.equalTo(buttonWidth)
-//            make.height.equalTo(40)
-//        }
+        signInButton.snp.makeConstraints { (make) in
+            make.top.equalTo(passWordTextField.snp.bottom).offset(30)
+            make.left.equalTo(view).offset(15)
+            make.right.equalTo(view).offset(-15)
+            make.width.equalTo(buttonWidth)
+            make.height.equalTo(40)
+        }
         
         loginButton.snp.makeConstraints { (make) in
-            make.top.equalTo(passWordTextField.snp.bottom).offset(30)
+            make.top.equalTo(signInButton.snp.bottom).offset(15)
             make.width.equalTo(buttonWidth)
             make.left.equalTo(view).offset(15)
             make.right.equalTo(view).offset(-15)
             make.height.equalTo(40)
         }
         
-        let tip = UILabel()
-        view.addSubview(tip)
-        
-        tip.font = UIFont.systemFont(ofSize: 12)
-        tip.textColor = UIColor.lightGray
-        tip.textAlignment = .left
-        tip.text = "提示:从MyBook激活后,使用短信中的临时密码登陆!"
-        
-        tip.snp.makeConstraints { (make) in
-            make.left.equalTo(view).offset(15)
-            make.right.equalTo(view).offset(-15)
-            make.height.equalTo(21)
-            make.top.equalTo(loginButton.snp.bottom).offset(15)
-        }
+//        let tip = UILabel()
+//        view.addSubview(tip)
+//        
+//        tip.font = UIFont.systemFont(ofSize: 12)
+//        tip.textColor = UIColor.lightGray
+//        tip.textAlignment = .left
+//        tip.text = "提示:从MyBook激活后,使用短信中的临时密码登陆!"
+//        
+//        tip.snp.makeConstraints { (make) in
+//            make.left.equalTo(view).offset(15)
+//            make.right.equalTo(view).offset(-15)
+//            make.height.equalTo(21)
+//            make.top.equalTo(loginButton.snp.bottom).offset(15)
+//        }
         
         
         helpLabel = UILabel()
@@ -281,13 +280,12 @@ extension LoginViewController {
     }
     
     
-    func loginWithTry() {
-        
-        let hud = MBProgressHUD.showAdded(to: view, animated: true)
-        hud?.mode = .text
-        hud?.labelText = "暂未开通"
-        
-        hud?.hide(true, afterDelay: 2.0)
+    func signIn() {
+        //注册
+        let vc = SignInViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        vc.title = "注册"
+        self.present(nav, animated: true, completion: nil)
         
     }
     
@@ -316,11 +314,10 @@ extension LoginViewController {
         
         let hud = showHudWith(view, animated: true, mode: .indeterminate, text: "")
         
-        User.loginWith(userName, passWord: passWord, usertype: UserLoginType.Employee) { (user, data, error) in
+        User.loginWith(userName, passWord: passWord, usertype: UserLoginType.Customer) { (user, data, error) in
             
             hud.hide(true)
             if error == nil {
-                
                 
                 let clientId = String(user!.clientId)
                 NotificationCenter.default.post(name:OwnSystemLoginSuccessNoti, object: clientId)

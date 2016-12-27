@@ -153,7 +153,7 @@ class CodeLoginVerifyVC: UIViewController {
         
         codeTextField.resignFirstResponder()
         
-        User.loginWithCode(mobile, code: smsCode, usertype: UserLoginType.Employee) { (user, data, error) in
+        User.loginWithCode(mobile, code: smsCode, usertype: UserLoginType.Customer) { (user, data, error) in
             
             self.showHud()
             if error == nil {

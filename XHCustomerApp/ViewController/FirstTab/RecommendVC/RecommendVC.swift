@@ -133,7 +133,7 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
                 if let strongSelf = self {
                 }
             }) {
-                loopView.shouldAutoClipImageToViewSize = true
+                //loopView.shouldAutoClipImageToViewSize = true
                 cell.addSubview(loopView)
             }
             

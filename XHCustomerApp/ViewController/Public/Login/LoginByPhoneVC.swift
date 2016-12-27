@@ -111,7 +111,7 @@ class LoginByPhoneVC: UIViewController {
             return
         }
         
-        NetworkManager.sharedManager.getPhoneCodeWith(mobile, usertype: UserLoginType.Employee, codeType: PhoneCodeType.sms) { (success, json, error) in
+        NetworkManager.sharedManager.getPhoneCodeWith(mobile, usertype: UserLoginType.Customer, codeType: PhoneCodeType.sms) { (success, json, error) in
             
             if success {
                 

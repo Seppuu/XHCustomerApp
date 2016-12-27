@@ -12,7 +12,7 @@ import SwiftyJSON
 import RealmSwift
 import SwiftDate
 
-enum  VerifyCodeType: String{
+enum  VerifyCodeType: String {
     
     case sms = "sms"
     case voice = "voice"
@@ -46,6 +46,84 @@ class NetworkManager {
     ]
     
     //MARK:用户
+    
+    //注册验证码
+    func getSignInCode(_ phone:String,usertype:UserLoginType,completion:@escaping DDResultHandler) {
+        
+        
+        let sign = (phone + "-" + usertype.rawValue + "-" + Date.currentDateString() + "-" + XHPublicKey).md5()
+        
+        let dict:JSONDictionary = [
+            "mobile":phone,
+            "type":usertype.rawValue,
+            "sms_type":"sms",
+            "sign":sign
+        ]
+        
+        let urlString = SignInCodeUrl
+        
+        baseRequestWith(urlString, dict: dict, completion: completion)
+        
+    }
+    
+    //验证注册
+    func verifySignInCode(_ phone:String,usertype:UserLoginType,code:String,completion:@escaping DDResultHandler) {
+        
+        
+        let sign = (phone + "-" + usertype.rawValue + "-" + code + "-" + Date.currentDateString() + "-" + XHPublicKey).md5()
+        
+        let dict:JSONDictionary = [
+            "mobile":phone,
+            "type":usertype.rawValue,
+            "sms_code":code,
+            "sign":sign
+        ]
+        
+        let urlString = VerifySignInCode
+        
+        baseRequestWith(urlString, dict: dict, completion: completion)
+        
+    }
+    
+    //获取绑定信息
+    func getBingInfoWith(_ phone:String,usertype:UserLoginType,agentId:Int,completion:@escaping DDResultHandler) {
+        
+        
+        let sign = (phone + "-" + usertype.rawValue + "-" + String(agentId) + "-" + Date.currentDateString() + "-" + XHPublicKey).md5()
+        
+        let dict:JSONDictionary = [
+            "mobile":phone,
+            "type":usertype.rawValue,
+            "agent_id":agentId,
+            "sign":sign
+        ]
+        
+        let urlString = GetBindingUrl
+        
+        baseRequestWith(urlString, dict: dict, completion: completion)
+        
+    }
+    
+    //完成绑定
+    func completeBingWith(_ phone:String,usertype:UserLoginType,agentId:Int,completion:@escaping DDResultHandler) {
+        
+        
+        let sign = (phone + "-" + usertype.rawValue + "-" + String(agentId) + "-" + Date.currentDateString() + "-" + XHPublicKey).md5()
+        
+        let dict:JSONDictionary = [
+            "mobile":phone,
+            "type":usertype.rawValue,
+            "agent_id":agentId,
+            "sign":sign
+        ]
+        
+        let urlString = CompleteBingUrl
+        
+        baseRequestWith(urlString, dict: dict, completion: completion)
+        
+    }
+    
+    
     
     //login
     func loginWith(_ mobile:String,passWord:String,usertype:UserLoginType,completion:@escaping DDResultHandler) {

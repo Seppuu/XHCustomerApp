@@ -76,13 +76,21 @@ extension String {
     func isPhoneNumber() -> Bool {
         
         var isPhone = false
-        let threeNum = self.substring(0, length: 3)
-        PhoneNumbers.phones.forEach { (numbers) in
+        
+        if self == "" || self.characters.count != 11 {
             
-            for i in 0..<numbers.count {
+        }
+        else {
+            
+            let threeNum = self.substring(0, length: 3)
+            PhoneNumbers.phones.forEach { (numbers) in
                 
-                if threeNum == String(numbers[i]) {
-                    isPhone =  true
+                for i in 0..<numbers.count {
+                    
+                    if threeNum == String(numbers[i]) {
+                        isPhone =  true
+                        
+                    }
                     
                 }
                 
@@ -90,7 +98,6 @@ extension String {
             
         }
         
-    
         return isPhone
     }
 

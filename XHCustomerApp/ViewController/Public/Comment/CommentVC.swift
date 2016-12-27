@@ -43,9 +43,32 @@ class CommentVC: UIViewController {
     
     func submit() {
         //TODO:submit
+        let hud = showHudWith(self.view, animated: true, mode: .indeterminate, text: "")
+        
+        hud.hide(true)
+        showAlert()
+        
+    }
+    
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "评价成功", message: "每次评价之后,参与抽奖,有机会赢取免单等优惠!", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "下次吧", style: .cancel, handler: nil)
+        
+        let confirmAction = UIAlertAction(title: "去抽奖", style: .default) { (action) in
+            
+            let webVC = BaseWebViewController()
+            webVC.urlString = "https://kaifanfr.github.io/Lottery/"
+            self.navigationController?.pushViewController(webVC, animated: true)
+            
+        }
         
         
+        alert.addAction(cancelAction)
+        alert.addAction(confirmAction)
         
+        self.present(alert, animated: true, completion: nil)
     }
     
     var tags0 = [Tag]()

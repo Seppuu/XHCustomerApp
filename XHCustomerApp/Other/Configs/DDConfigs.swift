@@ -45,8 +45,25 @@ var DDBaseUrl:String {
 
 var allUserIds = [String]()
 
-///用户登录
-let loginWithPhoneURL          = BaseUrl + "/rest/loginmobile"
+
+///注册
+
+//获取注册验证码
+let SignInCodeUrl = BaseUrl + "/rest/registersmsgot"
+
+//验证注册
+let VerifySignInCode = BaseUrl + "/rest/registersmsverify"
+
+//获取企业绑定信息
+let GetBindingUrl = BaseUrl + "/rest/bindinginfo"
+
+//完成企业绑定
+let CompleteBingUrl = BaseUrl + "/rest/binding"
+
+
+///登陆
+//用户登录
+let loginWithPhoneURL  = BaseUrl + "/rest/loginmobile"
 
 //用户登出
 let logOutURL          = BaseUrl + "/rest/logout"

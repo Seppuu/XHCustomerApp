@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let currentClientId = Defaults.clientId.value!
         if currentClientId != "" {
             
-            User.setAlluserId()
+           
             self.openLeanCloudIMWith(currentClientId,autoLogin:true)
         }
         else {
@@ -252,6 +252,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func pushToViewControllerWith(_ data:[AnyHashable: Any]) {
+        
+        let viewController = window?.visibleViewController!
+        if let userInfo = data as? [String : AnyObject] {
+            
+            if let type =  userInfo["notice_type"] as? String {
+                if type == "register" {
+                    
+                    if let id = userInfo["agent_id"] as? String {
+                        let vc = BindViewController()
+                        vc.agentId = Int(id)
+                        vc.title = "绑定"
+                        viewController!.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+                
+                
+            }
+            
+        }
+        else {
+            
+        }
         
     }
     

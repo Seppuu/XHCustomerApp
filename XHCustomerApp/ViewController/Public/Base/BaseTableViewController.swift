@@ -153,7 +153,7 @@ extension BaseTableViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
 
-        let baseModel = listArray[(indexPath as NSIndexPath).section].list[(indexPath as NSIndexPath).row]
+        let baseModel = listArray[indexPath.section].list[indexPath.row]
         
         if baseModel.hasList == true {
             let vc = BaseTableViewController()

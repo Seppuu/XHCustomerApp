@@ -56,7 +56,11 @@
 }
 
 + (void)invokeThisMethodInDidRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [AVOSCloud handleRemoteNotificationsWithDeviceToken:deviceToken];
+    //[AVOSCloud handleRemoteNotificationsWithDeviceToken:deviceToken];
+    //为了上传自定义证书,加入deviceProfile https://forum.leancloud.cn/t/universal-invalid-token/10646/7
+    [AVOSCloud handleRemoteNotificationsWithDeviceToken:deviceToken constructingInstallationWithBlock:^(AVInstallation *currentInstallation) {
+        currentInstallation.deviceProfile = @"XHCustomerPushCer";
+    }];
 }
 
 + (void)invokeThisMethodBeforeLogoutSuccess:(LCCKVoidBlock)success failed:(LCCKErrorBlock)failed {

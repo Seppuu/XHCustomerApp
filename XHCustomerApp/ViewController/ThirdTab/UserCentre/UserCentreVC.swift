@@ -53,6 +53,7 @@ class UserCentreVC: BaseViewController {
         section1 = ["我的评价","邀请有奖","在线客服"]
         
         
+        
         setTableView()
     }
     
@@ -92,7 +93,7 @@ extension UserCentreVC:UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,8 +101,11 @@ extension UserCentreVC:UITableViewDelegate,UITableViewDataSource {
         if section == 0 {
             return 1
         }
-        else {
+        else if section == 1 {
             return section1.count
+        }
+        else {
+            return 1
         }
     }
     
@@ -167,16 +171,23 @@ extension UserCentreVC:UITableViewDelegate,UITableViewDataSource {
             return cell
             
         }
-        else {
+        else if indexPath.section == 1 {
             let cellID = "cellIDs1"
             let cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
-            
             
             cell.textLabel?.text = section1[indexPath.row]
             cell.selectionStyle = .none
             return cell
             
 
+        }
+        else {
+            let cellID = "cellIDs1"
+            let cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
+            
+            cell.textLabel?.text = "退出"
+            cell.selectionStyle = .none
+            return cell
         }
         
     }
@@ -189,7 +200,73 @@ extension UserCentreVC:UITableViewDelegate,UITableViewDataSource {
             
             
         }
+        else if indexPath.section == 0 {
+            
+        }
+        else {
+            
+            if indexPath.row == 0 {
+                //退出
+                showAlertView()
+            }
+            
+        }
     }
+    
+    
+    func showAlertView() {
+        
+        let alert = UIAlertController(title: "提示", message: "退出应用", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "取消", style: .default, handler: nil)
+        
+        let confirmAction = UIAlertAction(title: "确认", style: .destructive) { (action) in
+            self.logOut()
+        }
+        
+        
+        alert.addAction(cancelAction)
+        alert.addAction(confirmAction)
+        
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func logOut() {
+        
+        User.logOut({ (success, json, error) in
+            
+            if success {
+                //show intro
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                appDelegate.showGuide()
+                
+            }
+            else {
+                if let hud = MBProgressHUD.showAdded(to: (self.view)!, animated: true) {
+                    hud.mode = .text
+                    hud.labelText = error
+                    
+                    hud.hide(true, afterDelay: 1.5)
+                }
+                
+            }
+            
+        }) { (error) in
+            //TODO:leanCloud IM 退出失败
+            if let hud = MBProgressHUD.showAdded(to: (self.view)!, animated: true) {
+                hud.mode = .text
+                hud.labelText = error.debugDescription
+                
+                hud.hide(true, afterDelay: 1.5)
+            }
+        }
+        
+        
+    }
+        
     
 }
 

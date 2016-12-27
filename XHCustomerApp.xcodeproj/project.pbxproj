@@ -17,6 +17,7 @@
 		370A73941DED67480095950F /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370A73921DED67480095950F /* OrderCell.xib */; };
 		370A73971DED7AC20095950F /* OrderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370A73951DED7AC20095950F /* OrderDetailCell.swift */; };
 		370A73981DED7AC20095950F /* OrderDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370A73961DED7AC20095950F /* OrderDetailCell.xib */; };
+		3749EE111E10F8B60038A6EE /* BindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749EE101E10F8B60038A6EE /* BindViewController.swift */; };
 		3757E6CA1DEBF56A00DF5DC9 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6C91DEBF56A00DF5DC9 /* CardListViewController.swift */; };
 		3757E6CC1DEBF5A900DF5DC9 /* CouponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6CB1DEBF5A900DF5DC9 /* CouponListViewController.swift */; };
 		3757E6D01DEC07EA00DF5DC9 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */; };
@@ -27,7 +28,6 @@
 		3757E6DD1DEC31F300DF5DC9 /* AutoPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757E6DC1DEC31F300DF5DC9 /* AutoPagingView.swift */; };
 		378346B41DE7E087005A2EA4 /* DDConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783462F1DE7E087005A2EA4 /* DDConfigs.swift */; };
 		378346B51DE7E087005A2EA4 /* DDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378346301DE7E087005A2EA4 /* DDHelper.swift */; };
-		378346B61DE7E087005A2EA4 /* DDIMConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378346311DE7E087005A2EA4 /* DDIMConfig.swift */; };
 		378346B71DE7E087005A2EA4 /* DDUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378346321DE7E087005A2EA4 /* DDUserDefault.swift */; };
 		378346B81DE7E087005A2EA4 /* Array+DD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378346341DE7E087005A2EA4 /* Array+DD.swift */; };
 		378346B91DE7E087005A2EA4 /* Dictionary+DD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378346351DE7E087005A2EA4 /* Dictionary+DD.swift */; };
@@ -297,6 +297,8 @@
 		378679D61DE83DF2003F4E94 /* StarWithTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378679D41DE83DF2003F4E94 /* StarWithTagCell.swift */; };
 		378679D71DE83DF2003F4E94 /* StarWithTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378679D51DE83DF2003F4E94 /* StarWithTagCell.xib */; };
 		378679D91DE85C49003F4E94 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378679D81DE85C49003F4E94 /* Tag.swift */; };
+		37B058AB1E0D047400F817CB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B058A91E0D047400F817CB /* SignInViewController.swift */; };
+		37B058AC1E0D047400F817CB /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B058AA1E0D047400F817CB /* SignInViewController.xib */; };
 		37F935EB1DE7DBFD006C3CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F935EA1DE7DBFD006C3CF9 /* AppDelegate.swift */; };
 		37F935ED1DE7DBFD006C3CF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F935EC1DE7DBFD006C3CF9 /* ViewController.swift */; };
 		37F935F01DE7DBFD006C3CF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F935EE1DE7DBFD006C3CF9 /* Main.storyboard */; };
@@ -317,6 +319,7 @@
 		370A73921DED67480095950F /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		370A73951DED7AC20095950F /* OrderDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailCell.swift; sourceTree = "<group>"; };
 		370A73961DED7AC20095950F /* OrderDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetailCell.xib; sourceTree = "<group>"; };
+		3749EE101E10F8B60038A6EE /* BindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindViewController.swift; sourceTree = "<group>"; };
 		3757E6C91DEBF56A00DF5DC9 /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		3757E6CB1DEBF5A900DF5DC9 /* CouponListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponListViewController.swift; sourceTree = "<group>"; };
 		3757E6CE1DEC07EA00DF5DC9 /* CouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
@@ -327,7 +330,6 @@
 		3757E6DC1DEC31F300DF5DC9 /* AutoPagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoPagingView.swift; sourceTree = "<group>"; };
 		3783462F1DE7E087005A2EA4 /* DDConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDConfigs.swift; sourceTree = "<group>"; };
 		378346301DE7E087005A2EA4 /* DDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDHelper.swift; sourceTree = "<group>"; };
-		378346311DE7E087005A2EA4 /* DDIMConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDIMConfig.swift; sourceTree = "<group>"; };
 		378346321DE7E087005A2EA4 /* DDUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDUserDefault.swift; sourceTree = "<group>"; };
 		378346341DE7E087005A2EA4 /* Array+DD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+DD.swift"; sourceTree = "<group>"; };
 		378346351DE7E087005A2EA4 /* Dictionary+DD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+DD.swift"; sourceTree = "<group>"; };
@@ -353,7 +355,7 @@
 		3783464A1DE7E087005A2EA4 /* PhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 		3783464C1DE7E087005A2EA4 /* RealmMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		3783464E1DE7E087005A2EA4 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		3783464F1DE7E087005A2EA4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3783464F1DE7E087005A2EA4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../Other/Services/User.swift; sourceTree = "<group>"; };
 		378346501DE7E087005A2EA4 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		378346531DE7E087005A2EA4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		378346541DE7E087005A2EA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -649,6 +651,8 @@
 		378679D41DE83DF2003F4E94 /* StarWithTagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWithTagCell.swift; sourceTree = "<group>"; };
 		378679D51DE83DF2003F4E94 /* StarWithTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarWithTagCell.xib; sourceTree = "<group>"; };
 		378679D81DE85C49003F4E94 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		37B058A91E0D047400F817CB /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		37B058AA1E0D047400F817CB /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		37F935E71DE7DBFD006C3CF9 /* XHCustomerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHCustomerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F935EA1DE7DBFD006C3CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F935EC1DE7DBFD006C3CF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -714,6 +718,14 @@
 			path = OrderCell;
 			sourceTree = "<group>";
 		};
+		3749EE0F1E10F8A70038A6EE /* Bind */ = {
+			isa = PBXGroup;
+			children = (
+				3749EE101E10F8B60038A6EE /* BindViewController.swift */,
+			);
+			path = Bind;
+			sourceTree = "<group>";
+		};
 		3757E6CD1DEC07D200DF5DC9 /* CouponCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,7 +770,6 @@
 			children = (
 				3783462F1DE7E087005A2EA4 /* DDConfigs.swift */,
 				378346301DE7E087005A2EA4 /* DDHelper.swift */,
-				378346311DE7E087005A2EA4 /* DDIMConfig.swift */,
 				378346321DE7E087005A2EA4 /* DDUserDefault.swift */,
 			);
 			path = Configs;
@@ -812,7 +823,6 @@
 			isa = PBXGroup;
 			children = (
 				3783464E1DE7E087005A2EA4 /* NetworkManager.swift */,
-				3783464F1DE7E087005A2EA4 /* User.swift */,
 				378346501DE7E087005A2EA4 /* UserManager.swift */,
 			);
 			path = Services;
@@ -1046,6 +1056,7 @@
 		378347031DE7E08D005A2EA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3783464F1DE7E087005A2EA4 /* User.swift */,
 				378347041DE7E08D005A2EA4 /* ChartComponents */,
 				378347061DE7E08D005A2EA4 /* Customer.swift */,
 				378347071DE7E08D005A2EA4 /* Form.swift */,
@@ -1116,6 +1127,7 @@
 			isa = PBXGroup;
 			children = (
 				378347231DE7E093005A2EA4 /* Base */,
+				3749EE0F1E10F8A70038A6EE /* Bind */,
 				3783472A1DE7E093005A2EA4 /* Chart */,
 				378347321DE7E093005A2EA4 /* Good */,
 				378349321DE824A6005A2EA4 /* Comment */,
@@ -1210,6 +1222,8 @@
 				378347401DE7E093005A2EA4 /* LoginByPhoneVC.swift */,
 				378347411DE7E093005A2EA4 /* LoginByPhoneVC.xib */,
 				378347421DE7E093005A2EA4 /* LoginViewController.swift */,
+				37B058A91E0D047400F817CB /* SignInViewController.swift */,
+				37B058AA1E0D047400F817CB /* SignInViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2258,6 +2272,7 @@
 				370A73981DED7AC20095950F /* OrderDetailCell.xib in Resources */,
 				378348F41DE7E5C7005A2EA4 /* ReMarkCell.xib in Resources */,
 				378348DE1DE7E5C7005A2EA4 /* progressCell.xib in Resources */,
+				37B058AC1E0D047400F817CB /* SignInViewController.xib in Resources */,
 				378348071DE7E09D005A2EA4 /* CustomizedChatKitOther.bundle in Resources */,
 				378348FC1DE7E5C7005A2EA4 /* StepperCell.xib in Resources */,
 				378346EA1DE7E087005A2EA4 /* Info.plist in Resources */,
@@ -2405,6 +2420,7 @@
 				378348BD1DE7E5C7005A2EA4 /* ChannelListCell.swift in Sources */,
 				378346F01DE7E087005A2EA4 /* OTPageScrollView.m in Sources */,
 				378348F91DE7E5C7005A2EA4 /* StaffPicksCardCell.swift in Sources */,
+				37B058AB1E0D047400F817CB /* SignInViewController.swift in Sources */,
 				378346BC1DE7E087005A2EA4 /* NSTimeZone+DD.swift in Sources */,
 				378348F71DE7E5C7005A2EA4 /* SliderCell.swift in Sources */,
 				3783478A1DE7E094005A2EA4 /* PieChartViewController.swift in Sources */,
@@ -2419,7 +2435,6 @@
 				378347FB1DE7E09D005A2EA4 /* LCCKVCardMessageCell.m in Sources */,
 				378347101DE7E08D005A2EA4 /* Form.swift in Sources */,
 				378346CF1DE7E087005A2EA4 /* NetworkManager.swift in Sources */,
-				378346B61DE7E087005A2EA4 /* DDIMConfig.swift in Sources */,
 				378349341DE824D7005A2EA4 /* CommentVC.swift in Sources */,
 				378347FC1DE7E09D005A2EA4 /* LCCKVCardView.m in Sources */,
 				378347911DE7E094005A2EA4 /* GuideViewController.swift in Sources */,
@@ -2432,6 +2447,7 @@
 				378348001DE7E09D005A2EA4 /* DEMOCustomAutoCompleteObject.m in Sources */,
 				3783478E1DE7E094005A2EA4 /* GoodListVC.swift in Sources */,
 				378349031DE7E5C7005A2EA4 /* UserAvatarCell.swift in Sources */,
+				3749EE111E10F8B60038A6EE /* BindViewController.swift in Sources */,
 				378348D71DE7E5C7005A2EA4 /* formCell.swift in Sources */,
 				378348011DE7E09D005A2EA4 /* DEMODataSource.m in Sources */,
 				378346B51DE7E087005A2EA4 /* DDHelper.swift in Sources */,
@@ -2672,11 +2688,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2F9H286LLV;
 				INFOPLIST_FILE = XHCustomerApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seppuu.XHCustomerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mybook.XHCustomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHCustomerApp/XHCustomerApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -2689,11 +2706,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2F9H286LLV;
 				INFOPLIST_FILE = XHCustomerApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seppuu.XHCustomerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mybook.XHCustomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHCustomerApp/XHCustomerApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

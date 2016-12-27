@@ -294,7 +294,7 @@ extension AccountManagerVC: UITableViewDelegate,UITableViewDataSource {
         let userName = Defaults.currentAccountName.value!
         let passWord = Defaults.currentPassWord.value!
         
-        User.loginWith(userName, passWord: passWord, usertype: UserLoginType.Employee) { (user, data, error) in
+        User.loginWith(userName, passWord: passWord, usertype: UserLoginType.Customer) { (user, data, error) in
             
             
             if error == nil {

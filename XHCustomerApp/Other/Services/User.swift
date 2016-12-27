@@ -135,24 +135,10 @@ class User:NSObject {
                     Defaults.userOrgId.value = orgId
                 }
                 
+               
+                
                 //获取联系人列表之后,完成登陆
-                
-                NetworkManager.sharedManager.getUserList { (success, json, error) in
-                    
-                    if success == true {
-                        if let listOfData = json?.array {
-                            
-                            self.saveUserListWith(listOfData)
-                            completion(User.currentUser(),data, nil)
-                            
-                        }
-                    }
-                    else {
-                        //TODO:获取联系人失败.
-                        completion(nil, json, error)
-                    }
-                }
-                
+                completion(User.currentUser(), nil, error)
                 
             }
             else {
@@ -163,25 +149,6 @@ class User:NSObject {
             
         }
         
-        
-    }
-    
-    
-    class func getContactList(_ completion:@escaping DDResultHandler) {
-        
-        NetworkManager.sharedManager.getUserList { (success, json, error) in
-            
-            if success == true {
-                if let listOfData = json?.array {
-                    self.saveUserListWith(listOfData)
-                    completion(true, nil, nil)
-                }
-            }
-            else {
-                //获取联系人失败.
-                completion(false, nil, error)
-            }
-        }
     }
     
 
@@ -253,27 +220,10 @@ class User:NSObject {
                     Defaults.userOrgId.value = orgId
                 }
                 
-                //save passWord and account for auto change account
                 Defaults.currentPassWord.value = passWord
                 Defaults.currentAccountName.value = mobile
                 
-                //获取联系人列表之后,完成登陆
-                NetworkManager.sharedManager.getUserList { (success, json, error) in
-                    
-                    if success == true {
-                        if let listOfData = json?.array {
-                            
-                            self.saveUserListWith(listOfData)
-                            completion(User.currentUser(),data, nil)
-                            
-                        }
-                    }
-                    else {
-                        //TODO:获取联系人失败.
-                        completion(nil, json, error)
-                    }
-                }
-                
+                completion(User.currentUser(), nil, error)
                 
             }
             else {
@@ -286,64 +236,7 @@ class User:NSObject {
     
     }
     
-    func getUserList() {
-        
-        
-    }
     
-    class func saveUserListWith(_ listOfData:[JSON]) {
-        
-        let realm = try! Realm()
-        
-        try! realm.write {
-            realm.deleteAll()
-        }
-        var clientIds = [String]()
-        
-        for data in listOfData {
-            
-            let rmUser = RealmUser()
-            if let id = data["user_id"].int {
-                let stringID = String(id)
-                rmUser.userId = stringID
-            }
-            
-            if let clientId = data["guid"].string {
-                rmUser.clientId = clientId
-                clientIds.append(clientId)
-            }
-
-            //账户名
-            if let  userName = data["user_name"].string {
-                rmUser.userName = userName
-            }
-            
-            
-            if let  userDisplayName = data["display_name"].string {
-                rmUser.displayName = userDisplayName
-            }
-            
-            
-            if let avatarUrl = data["avator_url"].string {
-                rmUser.avatarUrl = avatarUrl
-            }
-            
-            if let orgName = data["org_name"].string {
-                rmUser.orgName = orgName
-            }
-            
-            if let orgId = data["org_id"].int {
-                rmUser.orgId = orgId
-            }
-            
-            try! realm.write {
-                realm.add(rmUser)
-            }
-        }
-        
-        allUserIds = clientIds
-        
-    }
     
     class func getUserBy(_ clientId:String) ->  XHUser? {
         
@@ -364,26 +257,6 @@ class User:NSObject {
         }
         
     }
-    
-    class func setAlluserId(){
-        
-        var clientIds = [String]()
-        
-        let realm = try! Realm()
-        
-        let rmUsersResult = realm.objects(RealmUser.self)
-        
-        if rmUsersResult.count > 0 {
-            
-            for rmUser in rmUsersResult {
-                
-                 clientIds.append(rmUser.clientId)
-            }
-        }
-        
-        allUserIds = clientIds
-    }
-    
     
     class func getAllUser() -> [User] {
         
@@ -494,6 +367,8 @@ class User:NSObject {
         Defaults.userReportType.clear()
         Defaults.userOrgName.clear()
         Defaults.userOrgId.clear()
+        
+        
         
         User.sharedUser = nil
         
