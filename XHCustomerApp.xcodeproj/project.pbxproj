@@ -653,6 +653,7 @@
 		378679D81DE85C49003F4E94 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		37B058A91E0D047400F817CB /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		37B058AA1E0D047400F817CB /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		37F5AFC91E1266840021C5D4 /* XHCustomerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XHCustomerApp.entitlements; sourceTree = "<group>"; };
 		37F935E71DE7DBFD006C3CF9 /* XHCustomerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHCustomerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F935EA1DE7DBFD006C3CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F935EC1DE7DBFD006C3CF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -2125,6 +2126,7 @@
 		37F935E91DE7DBFD006C3CF9 /* XHCustomerApp */ = {
 			isa = PBXGroup;
 			children = (
+				37F5AFC91E1266840021C5D4 /* XHCustomerApp.entitlements */,
 				378347B61DE7E09D005A2EA4 /* ChatExample */,
 				3783462D1DE7E087005A2EA4 /* Other */,
 				378347031DE7E08D005A2EA4 /* Model */,
@@ -2186,6 +2188,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 2F9H286LLV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -2688,6 +2695,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = XHCustomerApp/XHCustomerApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2F9H286LLV;
 				INFOPLIST_FILE = XHCustomerApp/Info.plist;
@@ -2695,6 +2703,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mybook.XHCustomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHCustomerApp/XHCustomerApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -2706,6 +2716,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = XHCustomerApp/XHCustomerApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2F9H286LLV;
 				INFOPLIST_FILE = XHCustomerApp/Info.plist;
@@ -2713,6 +2724,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mybook.XHCustomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XHCustomerApp/XHCustomerApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

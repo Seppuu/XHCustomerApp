@@ -59,7 +59,8 @@
     //[AVOSCloud handleRemoteNotificationsWithDeviceToken:deviceToken];
     //为了上传自定义证书,加入deviceProfile https://forum.leancloud.cn/t/universal-invalid-token/10646/7
     [AVOSCloud handleRemoteNotificationsWithDeviceToken:deviceToken constructingInstallationWithBlock:^(AVInstallation *currentInstallation) {
-        currentInstallation.deviceProfile = @"XHCustomerPushCer";
+        //currentInstallation.deviceProfile = @"XHCustomerPushCer";
+        currentInstallation.deviceProfile = @"XianHuiCustomerDevPushCer";
     }];
 }
 

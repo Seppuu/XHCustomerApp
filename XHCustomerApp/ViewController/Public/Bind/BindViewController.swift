@@ -71,6 +71,7 @@ class BindViewController: BaseTableViewController {
     func getData() {
         
         NetworkManager.sharedManager.getBingInfoWith(Defaults.currentAccountName.value!, usertype: .Customer, agentId: 1) { (success, json, error) in
+            self.tableView.mj_header.endRefreshing()
             if success == true {
                 self.setNavBar()
                 self.makeData(json!)
@@ -183,11 +184,18 @@ class BindViewController: BaseTableViewController {
             section1.list.append(model)
         }
         
-        
-
         self.listArray = [section0,section1]
         self.tableView.reloadData()
         
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 80
+        }
+        else {
+            return 40
+        }
     }
     
     
