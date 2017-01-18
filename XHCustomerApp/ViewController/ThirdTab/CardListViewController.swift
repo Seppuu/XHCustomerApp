@@ -109,12 +109,12 @@ class CardListViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let model = self.listArray[(indexPath as NSIndexPath).section].list[(indexPath as NSIndexPath).row]
-        
-        let vc = CustomerCardDetailVC()
-        vc.cardNum = model.num
-        vc.title = model.name
-        self.navigationController?.pushViewController(vc, animated: true)
-        
+//        
+//        let vc = CustomerCardDetailVC()
+//        vc.cardNum = model.num
+//        vc.title = model.name
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        
         
     }
 

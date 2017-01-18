@@ -154,10 +154,13 @@ extension AccountManagerVC: UITableViewDelegate,UITableViewDataSource {
         }
         else {
             //退出
-            let cell = tableView.dequeueReusableCell(withIdentifier: logOutCellId, for: indexPath) as! SingleTapCell
+            let cell = UITableViewCell()
             
-            cell.middleLabel.text = "退出"
-            cell.middleLabel.textColor = UIColor.red
+            let label = UILabel(frame: cell.frame)
+            cell.addSubview(label)
+            
+            label.text = "退出"
+            label.textColor = UIColor.red
             
             return cell
         }
