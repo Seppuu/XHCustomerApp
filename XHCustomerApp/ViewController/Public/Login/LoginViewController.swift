@@ -213,48 +213,48 @@ class LoginViewController: UIViewController {
 //        }
         
         
-        helpLabel = UILabel()
-        view.addSubview(helpLabel)
-        helpLabel.textAlignment = .center
-        helpLabel.text = "需要帮助?"
-        helpLabel.alpha = 0.0
-        helpLabel.font = UIFont.systemFont(ofSize: 14)
-        helpLabel.textColor = UIColor.ddBasicBlueColor()
-        helpLabel.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.showHelperAlert))
-        helpLabel.addGestureRecognizer(tap)
-        helpLabel.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
-            make.bottom.equalTo(view).offset(-20)
-            make.width.equalTo(100)
-            make.height.equalTo(44)
-        }
-        
+//        helpLabel = UILabel()
+//        view.addSubview(helpLabel)
+//        helpLabel.textAlignment = .center
+//        helpLabel.text = "需要帮助?"
+//        helpLabel.alpha = 0.0
+//        helpLabel.font = UIFont.systemFont(ofSize: 14)
+//        helpLabel.textColor = UIColor.ddBasicBlueColor()
+//        helpLabel.isUserInteractionEnabled = true
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.showHelperAlert))
+//        helpLabel.addGestureRecognizer(tap)
+//        helpLabel.snp.makeConstraints { (make) in
+//            make.centerX.equalTo(view)
+//            make.bottom.equalTo(view).offset(-20)
+//            make.width.equalTo(100)
+//            make.height.equalTo(44)
+//        }
+//        
         
     }
     
-    func showHelperAlert() {
-        
-        let title = "提示"
-        let message = "前往帮助中心获取帮助"
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        
-        let helperAction = UIAlertAction(title: "帮助中心", style: .default) { (action) in
-            let vc = HelpCenterViewController()
-            let nav = UINavigationController(rootViewController: vc)
-            self.present(nav, animated: true, completion: nil)
-            
-        }
-        
-        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        
-        alert.addAction(helperAction)
-        alert.addAction(cancelAction)
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
+//    func showHelperAlert() {
+//        
+//        let title = "提示"
+//        let message = "前往帮助中心获取帮助"
+//        
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+//        
+//        let helperAction = UIAlertAction(title: "帮助中心", style: .default) { (action) in
+//            let vc = HelpCenterViewController()
+//            let nav = UINavigationController(rootViewController: vc)
+//            self.present(nav, animated: true, completion: nil)
+//            
+//        }
+//        
+//        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+//        
+//        alert.addAction(helperAction)
+//        alert.addAction(cancelAction)
+//        
+//        self.present(alert, animated: true, completion: nil)
+//    }
+//    
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

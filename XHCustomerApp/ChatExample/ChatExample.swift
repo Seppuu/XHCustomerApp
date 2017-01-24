@@ -23,111 +23,8 @@ class ChatKitExample: LCChatKitExample {
         super.exampleInit()
         
     }
-    
-    //监听,LCCKNotificationConversationListDataSourceUpdated来获取最新的最近消息列表IDs.保存至服务器
-    func addSaveConvIdNoti() {
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(ChatKitExample.saveConversationListID(_:)), name: NSNotification.Name(rawValue: LCCKNotificationConversationListDataSourceUpdated), object: nil)
-    }
-    
-    func saveConversationListID(_ noti:Notification) {
-        
-        guard let conversationService  = noti.object as? LCCKConversationService else {return}
-        
-        guard let convs = conversationService.allRecentConversations() as? [AVIMConversation] else {return}
-        
-        var idsParam = ""
-        
-        for conv in convs {
-            
-            guard let id = conv.conversationId else {return}
-            idsParam += id + ","
-        }
-        if convs.count == 0 {
-           return
-        }
-        
-        idsParam.characters.removeLast()
-        
-        NetworkManager.sharedManager.saveConversationListwith(convIds: idsParam) { (success, json, error) in
-            
-            if success == true {
-                
-            }
-            else {
-                
-            }
-        }
-        
-    }
-    
-    public class func updateMessageListVC() {
-        
-        
-//        if isFirstLaunch == true {
-//            
-//        }
-//        else {
-//            return
-//        }
-        
-        NetworkManager.sharedManager.getConversationList { (success, json, error) in
-            
-            if success == true {
-                var convIDs = [String]()
-                if let datas = json?.array {
-                    for data in datas {
-                        if let id = data["conv_id"].string {
-                            
-                            convIDs.append(id)
-                            
-                        }
-                    }
 
-                    self.updateConvsListInLocal(with:convIDs)
 
-                }
-                
-            }
-            else {
-                
-            }
-        }
-        
-        
-    }
-    
-    class func updateConvsListInLocal(with conversationIDs:[String]) {
-        
-        let idSet = NSSet(array: conversationIDs)
-        let param = idSet as! Set<String>
-        LCChatKit.sharedInstance().conversationService.fetchConversations(withConversationIds: param) { (results, error) in
-            
-            if error == nil {
-                
-                /*我直接更新最近联系人会话，应该可以吧，因为 [[LCCKConversationService sharedInstance] updateRecentConversation:objects];
-                 这个方法最后会发送一个通知， [[NSNotificationCenter defaultCenter] postNotificationName:LCCKNotificationConversationListDataSourceUpdated object:self]，
-                 然后LCCKConversationListViewModel会Refresh tableView*/
-                LCChatKit.sharedInstance().conversationService.updateRecentConversation(results, shouldRefreshWhenFinished: true)
-//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: LCCKNotificationConversationListDataSourceUpdated), object: nil)
-                
-                
-               // [[LCCKConversationService sharedInstance] updateRecentConversation:objects];
-                
-                if let convs = results as? [AVIMConversation] {
-                    for conv in convs.reversed() {
-                        LCChatKit.sharedInstance().conversationService.insertRecentConversation(conv)
-                    }
-                    
-                }
-            }
-            else {
-                
-            }
-        }
-    }
-    
-    
     override func lcck_setFetchProfiles() {
         
         LCChatKit.sharedInstance().fetchProfilesBlock = {
@@ -174,14 +71,7 @@ class ChatKitExample: LCChatKitExample {
         }
     }
     
-    //打开扫一扫
-    class func openQRCodeVCForm(_ viewController:UIViewController) {
-        
-        let vc = QQScanViewController()
-        vc.title = "扫一扫"
-        viewController.navigationController?.pushViewController(vc, animated: true)
-        
-    }
+
     
     //群聊
     override class func exampleCreateGroupConversation(from viewController: UIViewController!) {

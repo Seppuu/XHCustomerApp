@@ -205,9 +205,6 @@
     [LCChatKitExample exampleCreateGroupConversationFromViewController:self.firstViewController];
 }
 
--(void)openReadQRCodeVC{
-    [ChatKitExample openQRCodeVCForm:self.firstViewController];
-}
 
 - (NSString *)arc4randomString {
     int a = arc4random_uniform(100000000);

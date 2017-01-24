@@ -15,6 +15,8 @@ class Good {
     
     var summary:String!
     
+    var desc:String!
+    
     var type:[String]!
     
     var id:String!
@@ -28,10 +30,11 @@ class Good {
     var notes:[GoodNote]!
 
     
-    init(id:String,title:String,summary:String,type:[String],retailPrice:Int,imageUrls:[String],notes:[GoodNote],projects:[Project]) {
+    init(id:String,title:String,desc:String,summary:String,type:[String],retailPrice:Int,imageUrls:[String],notes:[GoodNote],projects:[Project]) {
         
         self.id = id
         self.title = title
+        self.desc = desc
         self.summary = summary
         self.type = type
         self.retailPrice = retailPrice
@@ -43,7 +46,7 @@ class Good {
     convenience init() {
         let note = GoodNote()
         let project = Project()
-        self.init(id:"",title:"",summary:"",type:[""],retailPrice:0,imageUrls:[""],notes:[note],projects:[project])
+        self.init(id:"",title:"",desc:"",summary:"",type:[""],retailPrice:0,imageUrls:[""],notes:[note],projects:[project])
     
     }
 }

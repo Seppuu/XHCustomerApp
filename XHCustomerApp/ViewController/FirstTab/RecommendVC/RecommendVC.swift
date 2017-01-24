@@ -9,6 +9,8 @@
 import UIKit
 import AMScrollingNavbar
 import HYBLoopScrollView
+import MJRefresh
+import SwiftyJSON
 
 class RecommendVC: BaseViewController {
     
@@ -41,6 +43,8 @@ class RecommendVC: BaseViewController {
         if let navigationController = navigationController as? ScrollingNavigationController {
             navigationController.followScrollView(tableView, delay: 50.0)
         }
+        
+        tableView.reloadData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -58,13 +62,41 @@ class RecommendVC: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-//        let nib0 = UINib(nibName: "categoryCellId", bundle: nil)
-//        tableView.register(nib0, forHeaderFooterViewReuseIdentifier: "categoryCellId")
-//        
-//        
-        
         let nib1 = UINib(nibName: goodCellId, bundle: nil)
         tableView.register(nib1, forCellReuseIdentifier: goodCellId)
+        
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { 
+            
+            self.getList()
+            
+        })
+        
+        tableView.mj_footer.beginRefreshing()
+    }
+    
+    var pageSize = 10
+    
+    var pageNumber = 1
+    
+    func getList() {
+        
+        
+        NetworkManager.sharedManager.getGoodListWith(pageSize, pageNumber: pageNumber) { (success, json, error) in
+            self.tableView.mj_footer.endRefreshing()
+            if success == true {
+                self.makeData(json: json!)
+            }
+            else {
+                
+            }
+            
+        }
+        
+    }
+    
+    func makeData(json:JSON) {
+        
+        
     }
     
 
@@ -151,6 +183,7 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
             let cell = UITableViewCell()
             let meunView = SubscriptionTopView.instanceFromNib()
             meunView.frame = cell.frame
+            meunView.namesOfForm = ["面部","身体","足部","头部","背部","腰部","腿部"]
             cell.addSubview(meunView)
             
             return cell
@@ -168,6 +201,12 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.section == 3 {
+            
+            let vc = GoodViewController()
+            
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     
