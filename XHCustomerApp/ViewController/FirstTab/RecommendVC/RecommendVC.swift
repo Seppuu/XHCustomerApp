@@ -30,6 +30,7 @@ class RecommendVC: BaseViewController {
 
         title = "首页"
         view.backgroundColor = UIColor.ddViewBackGroundColor()
+        setNavBatItem()
         setTableView()
     }
 
@@ -54,6 +55,39 @@ class RecommendVC: BaseViewController {
         if let navigationController = navigationController as? ScrollingNavigationController {
             navigationController.stopFollowingScrollView()
         }
+    }
+    
+    func setNavBatItem() {
+        
+        let leftBarItem = UIBarButtonItem(title: "消息", style: .done, target: self, action: #selector(RecommendVC.toMessageList))
+
+        self.navigationItem.leftBarButtonItem = leftBarItem
+        
+        let firstRightBarItem = UIBarButtonItem(title: "切换", style: .done, target: self, action: #selector(RecommendVC.toStoreList))
+
+        let secondRightBarItem = UIBarButtonItem(title: "新增", style: .done, target: self, action: #selector(RecommendVC.addNewStore))
+        
+        self.navigationItem.rightBarButtonItems = [secondRightBarItem,firstRightBarItem]
+        
+    }
+    
+    func toMessageList() {
+        let vc = MessageListVC()
+        vc.title = "消息列表"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func toStoreList() {
+        let vc = StoreListVC()
+        vc.title = "店家列表"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func addNewStore() {
+        
+        let vc = QQScanViewController()
+        vc.title = "扫一扫新增"
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

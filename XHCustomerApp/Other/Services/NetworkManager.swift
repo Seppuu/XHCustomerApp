@@ -372,8 +372,23 @@ class NetworkManager {
 }
 
 
-//MARK:二维码
+//MARK:店铺新增,切换.
 extension NetworkManager {
+    //店铺列表
+    func getStoreListWith(_ completion:@escaping DDResultHandler) {
+        
+        let urlString = ""
+        
+        let sign = (Date.currentDateString() + "-" + XHPublicKey).md5()
+        
+        let dict:JSONDictionary = [
+            "sign":sign
+        ]
+        
+        baseRequestWith(urlString, dict: dict, completion: completion)
+    }
+    
+    
     
 }
 

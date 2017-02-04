@@ -183,6 +183,14 @@
 		378679D61DE83DF2003F4E94 /* StarWithTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378679D41DE83DF2003F4E94 /* StarWithTagCell.swift */; };
 		378679D71DE83DF2003F4E94 /* StarWithTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378679D51DE83DF2003F4E94 /* StarWithTagCell.xib */; };
 		378679D91DE85C49003F4E94 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378679D81DE85C49003F4E94 /* Tag.swift */; };
+		378F834F1E4579C60085B19A /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 378F834C1E4579C60085B19A /* CodeScan.bundle */; };
+		378F83501E4579C60085B19A /* QQScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F834D1E4579C60085B19A /* QQScanViewController.swift */; };
+		378F83511E4579C60085B19A /* ScanResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F834E1E4579C60085B19A /* ScanResultController.swift */; };
+		378F83541E457A610085B19A /* StoreListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F83531E457A610085B19A /* StoreListVC.swift */; };
+		378F83561E457A940085B19A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F83551E457A940085B19A /* Store.swift */; };
+		378F835E1E459EF70085B19A /* MessageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F835A1E459EF70085B19A /* MessageListCell.swift */; };
+		378F835F1E459EF70085B19A /* MessageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F835B1E459EF70085B19A /* MessageListModel.swift */; };
+		378F83601E459EF70085B19A /* MessageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F835C1E459EF70085B19A /* MessageListVC.swift */; };
 		379364CC1E30BEED0034E89D /* GoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379364CB1E30BEED0034E89D /* GoodDetailViewController.swift */; };
 		379364D01E30BFC20034E89D /* GoodProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379364CE1E30BFC20034E89D /* GoodProfileCell.swift */; };
 		379364D11E30BFC20034E89D /* GoodProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379364CF1E30BFC20034E89D /* GoodProfileCell.xib */; };
@@ -425,6 +433,14 @@
 		378679D41DE83DF2003F4E94 /* StarWithTagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWithTagCell.swift; sourceTree = "<group>"; };
 		378679D51DE83DF2003F4E94 /* StarWithTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarWithTagCell.xib; sourceTree = "<group>"; };
 		378679D81DE85C49003F4E94 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		378F834C1E4579C60085B19A /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		378F834D1E4579C60085B19A /* QQScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQScanViewController.swift; sourceTree = "<group>"; };
+		378F834E1E4579C60085B19A /* ScanResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanResultController.swift; sourceTree = "<group>"; };
+		378F83531E457A610085B19A /* StoreListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreListVC.swift; sourceTree = "<group>"; };
+		378F83551E457A940085B19A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		378F835A1E459EF70085B19A /* MessageListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListCell.swift; sourceTree = "<group>"; };
+		378F835B1E459EF70085B19A /* MessageListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListModel.swift; sourceTree = "<group>"; };
+		378F835C1E459EF70085B19A /* MessageListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListVC.swift; sourceTree = "<group>"; };
 		379364CB1E30BEED0034E89D /* GoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodDetailViewController.swift; sourceTree = "<group>"; };
 		379364CE1E30BFC20034E89D /* GoodProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodProfileCell.swift; sourceTree = "<group>"; };
 		379364CF1E30BFC20034E89D /* GoodProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodProfileCell.xib; sourceTree = "<group>"; };
@@ -860,6 +876,7 @@
 				378349301DE81EBC005A2EA4 /* Order.swift */,
 				378679D81DE85C49003F4E94 /* Tag.swift */,
 				3757E6D21DEC0AFC00DF5DC9 /* Coupon.swift */,
+				378F83551E457A940085B19A /* Store.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -886,6 +903,9 @@
 		378347181DE7E093005A2EA4 /* FirstTab */ = {
 			isa = PBXGroup;
 			children = (
+				378F83571E459E7C0085B19A /* MessageListVC */,
+				378F83521E457A470085B19A /* StoreListVC */,
+				378F834B1E4579C60085B19A /* Scan */,
 				373482B81E2F4A4500203BB1 /* GoodVC */,
 				378349231DE7FDE3005A2EA4 /* RecommendVC */,
 			);
@@ -1337,6 +1357,34 @@
 			path = StarWithTagCell;
 			sourceTree = "<group>";
 		};
+		378F834B1E4579C60085B19A /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				378F834C1E4579C60085B19A /* CodeScan.bundle */,
+				378F834D1E4579C60085B19A /* QQScanViewController.swift */,
+				378F834E1E4579C60085B19A /* ScanResultController.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		378F83521E457A470085B19A /* StoreListVC */ = {
+			isa = PBXGroup;
+			children = (
+				378F83531E457A610085B19A /* StoreListVC.swift */,
+			);
+			path = StoreListVC;
+			sourceTree = "<group>";
+		};
+		378F83571E459E7C0085B19A /* MessageListVC */ = {
+			isa = PBXGroup;
+			children = (
+				378F835A1E459EF70085B19A /* MessageListCell.swift */,
+				378F835B1E459EF70085B19A /* MessageListModel.swift */,
+				378F835C1E459EF70085B19A /* MessageListVC.swift */,
+			);
+			path = MessageListVC;
+			sourceTree = "<group>";
+		};
 		379364CD1E30BFA60034E89D /* GoodProfileCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1464,6 +1512,7 @@
 				378346E01DE7E087005A2EA4 /* EBBannerView.xib in Resources */,
 				378346FA1DE7E087005A2EA4 /* Info.plist in Resources */,
 				378347931DE7E094005A2EA4 /* CodeLoginVerifyVC.xib in Resources */,
+				378F834F1E4579C60085B19A /* CodeScan.bundle in Resources */,
 				379364D11E30BFC20034E89D /* GoodProfileCell.xib in Resources */,
 				37F935F51DE7DBFD006C3CF9 /* LaunchScreen.storyboard in Resources */,
 				378347F91DE7E09D005A2EA4 /* calling_card_bg@2x.png in Resources */,
@@ -1559,6 +1608,7 @@
 				378346C91DE7E087005A2EA4 /* DDAlert.swift in Sources */,
 				3783491C1DE7E5C7005A2EA4 /* BorderTextField.swift in Sources */,
 				378346C51DE7E087005A2EA4 /* UINavigationItem+DD.swift in Sources */,
+				378F835E1E459EF70085B19A /* MessageListCell.swift in Sources */,
 				378347981DE7E094005A2EA4 /* FirstLaunchRemindVC.swift in Sources */,
 				378346CD1DE7E087005A2EA4 /* PhotoManager.swift in Sources */,
 				378346BF1DE7E087005A2EA4 /* UIApplication+DD.swift in Sources */,
@@ -1577,6 +1627,7 @@
 				378346DE1DE7E087005A2EA4 /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
 				373482D81E2F6A4D00203BB1 /* SubscriptionDetailCell.swift in Sources */,
 				378346FE1DE7E087005A2EA4 /* UIViewController+RESideMenu.m in Sources */,
+				378F83601E459EF70085B19A /* MessageListVC.swift in Sources */,
 				378349311DE81EBC005A2EA4 /* Order.swift in Sources */,
 				378346D11DE7E087005A2EA4 /* UserManager.swift in Sources */,
 				378346E41DE7E087005A2EA4 /* UIImage+ColorAtPoint.m in Sources */,
@@ -1607,7 +1658,9 @@
 				37B058AB1E0D047400F817CB /* SignInViewController.swift in Sources */,
 				378346BC1DE7E087005A2EA4 /* NSTimeZone+DD.swift in Sources */,
 				378346BB1DE7E087005A2EA4 /* NSFileManager+DD.swift in Sources */,
+				378F83501E4579C60085B19A /* QQScanViewController.swift in Sources */,
 				378348061DE7E09D005A2EA4 /* NSObject+LCCKHUD.m in Sources */,
+				378F835F1E459EF70085B19A /* MessageListModel.swift in Sources */,
 				370A73821DED290C0095950F /* SUTableViewInterceptor.m in Sources */,
 				378347F71DE7E09D005A2EA4 /* LCCKInputViewPluginConversationBackground.m in Sources */,
 				378347FB1DE7E09D005A2EA4 /* LCCKVCardMessageCell.m in Sources */,
@@ -1655,6 +1708,7 @@
 				378346FC1DE7E087005A2EA4 /* RECommonFunctions.m in Sources */,
 				378679D91DE85C49003F4E94 /* Tag.swift in Sources */,
 				378346D51DE7E087005A2EA4 /* AMPopTip+Draw.m in Sources */,
+				378F83561E457A940085B19A /* Store.swift in Sources */,
 				370A73931DED67480095950F /* OrderCell.swift in Sources */,
 				378679D61DE83DF2003F4E94 /* StarWithTagCell.swift in Sources */,
 				378347841DE7E094005A2EA4 /* BaseTableViewController.swift in Sources */,
@@ -1682,7 +1736,9 @@
 				378347111DE7E08D005A2EA4 /* Hepler.swift in Sources */,
 				378346C71DE7E087005A2EA4 /* UIView+DD.swift in Sources */,
 				378346DD1DE7E087005A2EA4 /* CYLTabBarController.m in Sources */,
+				378F83541E457A610085B19A /* StoreListVC.swift in Sources */,
 				378347F41DE7E09D005A2EA4 /* ChatExample.swift in Sources */,
+				378F83511E4579C60085B19A /* ScanResultController.swift in Sources */,
 				378347941DE7E094005A2EA4 /* LoginByPhoneVC.swift in Sources */,
 				378347001DE7E087005A2EA4 /* StringHTML.swift in Sources */,
 				378346EC1DE7E087005A2EA4 /* MIDatePicker.swift in Sources */,
