@@ -11,6 +11,7 @@ import AMScrollingNavbar
 import HYBLoopScrollView
 import MJRefresh
 import SwiftyJSON
+import Kingfisher
 
 class RecommendVC: BaseViewController {
     
@@ -65,13 +66,14 @@ class RecommendVC: BaseViewController {
         let nib1 = UINib(nibName: goodCellId, bundle: nil)
         tableView.register(nib1, forCellReuseIdentifier: goodCellId)
         
-        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { 
-            
-            self.getList()
-            
-        })
+//        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { 
+//            
+//            self.getList()
+//            
+//        })
         
-        tableView.mj_footer.beginRefreshing()
+        //tableView.mj_footer.beginRefreshing()
+        getList()
     }
     
     var pageSize = 10
@@ -80,9 +82,9 @@ class RecommendVC: BaseViewController {
     
     func getList() {
         
-        
+        //TODO:这里没给分页.
         NetworkManager.sharedManager.getGoodListWith(pageSize, pageNumber: pageNumber) { (success, json, error) in
-            self.tableView.mj_footer.endRefreshing()
+            //self.tableView.mj_footer.endRefreshing()
             if success == true {
                 self.makeData(json: json!)
             }
@@ -94,9 +96,40 @@ class RecommendVC: BaseViewController {
         
     }
     
+    var goodList = [Good]()
+    
     func makeData(json:JSON) {
         
+        if let datas = json.array {
+            
+            for data in datas {
+                
+                let good = Good()
+                
+                if let title = data["fullname"].string {
+                    good.title = title
+                }
+                
+                if let summary = data["summary"].string {
+                    good.summary = summary
+                }
+                
+                if let imagesUrl = data["images_url"].array {
+                    good.imageUrls.removeAll()
+                    for url in imagesUrl {
+                        
+                        if let actualUrlString = url.string {
+                           good.imageUrls.append(actualUrlString)
+                        }
+                        
+                    }
+                }
+                
+                goodList.append(good)
+            }
+        }
         
+        tableView.reloadData()
     }
     
 
@@ -120,7 +153,7 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
             return 1
         }
         else {
-            return 4
+            return goodList.count
         }
     }
     
@@ -191,7 +224,15 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: goodCellId, for: indexPath) as! ContactsCell
             
-            cell.nameLabel.text = "项目名字"
+            let good = goodList[indexPath.row]
+            
+            cell.nameLabel.text = good.title
+            if let url = URL(string: good.imageUrls[0]) {
+               cell.avatarImageView.kf.setImage(with: url)
+            }
+            cell.avatarImageView.contentMode = .scaleAspectFill
+            cell.detailLabel.text = good.summary
+            
             cell.avatarImageView.backgroundColor = UIColor.ddViewBackGroundColor()
             
             return cell

@@ -105,14 +105,3 @@ class CustomerCardView: UIView {
 
 
 
-
-
-
-
-
-
-
-
-
-
-

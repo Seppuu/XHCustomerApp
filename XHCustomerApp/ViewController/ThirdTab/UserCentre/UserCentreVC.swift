@@ -149,6 +149,7 @@ extension UserCentreVC:UITableViewDelegate,UITableViewDataSource {
             if let url = URL(string: (user?.avatarURL)!) {
                cardView.avatarImageView.kf.setImage(with: url)
             }
+            cardView.avatarImageView.backgroundColor = UIColor.ddViewBackGroundColor()
             
             cardView.leftPartTapHandler = {
                 
