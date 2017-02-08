@@ -28,3 +28,7 @@
 #import "EBForeNotification.h"
 
 #import "SUTableView.h"
+
+#import "NJKWebViewProgressView.h"
+
+#import "NJKWebViewProgress.h"

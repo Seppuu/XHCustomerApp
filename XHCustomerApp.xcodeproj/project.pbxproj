@@ -180,6 +180,8 @@
 		378349341DE824D7005A2EA4 /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378349331DE824D7005A2EA4 /* CommentVC.swift */; };
 		378349381DE826B2005A2EA4 /* CommentStarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378349361DE826B2005A2EA4 /* CommentStarCell.swift */; };
 		378349391DE826B2005A2EA4 /* CommentStarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378349371DE826B2005A2EA4 /* CommentStarCell.xib */; };
+		3783CF501E4B059800EAD879 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 3783CF4D1E4B059800EAD879 /* NJKWebViewProgress.m */; };
+		3783CF511E4B059800EAD879 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3783CF4F1E4B059800EAD879 /* NJKWebViewProgressView.m */; };
 		378679D61DE83DF2003F4E94 /* StarWithTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378679D41DE83DF2003F4E94 /* StarWithTagCell.swift */; };
 		378679D71DE83DF2003F4E94 /* StarWithTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378679D51DE83DF2003F4E94 /* StarWithTagCell.xib */; };
 		378679D91DE85C49003F4E94 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378679D81DE85C49003F4E94 /* Tag.swift */; };
@@ -430,6 +432,10 @@
 		378349331DE824D7005A2EA4 /* CommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
 		378349361DE826B2005A2EA4 /* CommentStarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentStarCell.swift; sourceTree = "<group>"; };
 		378349371DE826B2005A2EA4 /* CommentStarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentStarCell.xib; sourceTree = "<group>"; };
+		3783CF4C1E4B059800EAD879 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		3783CF4D1E4B059800EAD879 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		3783CF4E1E4B059800EAD879 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		3783CF4F1E4B059800EAD879 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
 		378679D41DE83DF2003F4E94 /* StarWithTagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWithTagCell.swift; sourceTree = "<group>"; };
 		378679D51DE83DF2003F4E94 /* StarWithTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarWithTagCell.xib; sourceTree = "<group>"; };
 		378679D81DE85C49003F4E94 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
@@ -640,6 +646,7 @@
 		378346511DE7E087005A2EA4 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				3783CF4B1E4B059800EAD879 /* NJKWebViewProgress */,
 				370A737C1DED290C0095950F /* SUTableView */,
 				378346521DE7E087005A2EA4 /* AMPopTip */,
 				378346611DE7E087005A2EA4 /* ANStepperView */,
@@ -1348,6 +1355,17 @@
 			path = CommentStarCell;
 			sourceTree = "<group>";
 		};
+		3783CF4B1E4B059800EAD879 /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				3783CF4C1E4B059800EAD879 /* NJKWebViewProgress.h */,
+				3783CF4D1E4B059800EAD879 /* NJKWebViewProgress.m */,
+				3783CF4E1E4B059800EAD879 /* NJKWebViewProgressView.h */,
+				3783CF4F1E4B059800EAD879 /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
 		378679D31DE83DE0003F4E94 /* StarWithTagCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1667,6 +1685,7 @@
 				378346CF1DE7E087005A2EA4 /* NetworkManager.swift in Sources */,
 				378349341DE824D7005A2EA4 /* CommentVC.swift in Sources */,
 				378347FC1DE7E09D005A2EA4 /* LCCKVCardView.m in Sources */,
+				3783CF511E4B059800EAD879 /* NJKWebViewProgressView.m in Sources */,
 				378347911DE7E094005A2EA4 /* GuideViewController.swift in Sources */,
 				378348081DE7E09D005A2EA4 /* LCChatKitExample+Setting.m in Sources */,
 				378346E61DE7E087005A2EA4 /* FTPopOverMenu.m in Sources */,
@@ -1754,6 +1773,7 @@
 				378348CB1DE7E5C7005A2EA4 /* BasicInfoCell.swift in Sources */,
 				378346F81DE7E087005A2EA4 /* KCPinyinHelper.m in Sources */,
 				3783492D1DE80909005A2EA4 /* OrderListVC.swift in Sources */,
+				3783CF501E4B059800EAD879 /* NJKWebViewProgress.m in Sources */,
 				378346D61DE7E087005A2EA4 /* AMPopTip+Entrance.m in Sources */,
 				378347F81DE7E09D005A2EA4 /* LCCKVCardMessage.m in Sources */,
 				378349251DE7FDF4005A2EA4 /* RecommendVC.swift in Sources */,

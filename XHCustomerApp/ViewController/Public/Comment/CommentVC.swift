@@ -59,6 +59,7 @@ class CommentVC: UIViewController {
         let confirmAction = UIAlertAction(title: "去抽奖", style: .default) { (action) in
             
             let webVC = BaseWebViewController()
+            webVC.title = "闲时优惠"
             webVC.urlString = "https://kaifanfr.github.io/Lottery/"
             self.navigationController?.pushViewController(webVC, animated: true)
             

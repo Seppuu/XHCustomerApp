@@ -25,16 +25,38 @@ class OrderViewController: UIViewController {
     
     func setNavBar() {
         
-        let rightBarItem = UIBarButtonItem(title: "评价", style: UIBarButtonItemStyle.plain, target: self, action: #selector(OrderViewController.rightTap))
+        let rightBarItem = UIBarButtonItem(title: "模拟", style: UIBarButtonItemStyle.plain, target: self, action: #selector(OrderViewController.rightTap))
         navigationItem.rightBarButtonItem = rightBarItem
     }
     
     
     func rightTap() {
+
+        //模拟订单完成
+        showAlert()
         
-        let vc = CommentVC()
-        vc.title = "评价"
-        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "订单完成", message: "订单完成,评价完成后,有闲时优惠等你抽取!", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "下次吧.", style: .cancel, handler: nil)
+        
+        let confirmAction = UIAlertAction(title: "立即前往", style: .default) { [weak self] (action) in
+            
+            if let strongSelf = self {
+                let vc = CommentVC()
+                vc.title = "评价"
+                strongSelf.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(confirmAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,7 +86,6 @@ class OrderViewController: UIViewController {
         var controllerArray : [UIViewController] = []
         
         let controller1 = OrderListVC()
-        
         controller1.parentNavigationController = self.navigationController
         controller1.parentVC = self
         controller1.title = "全部"

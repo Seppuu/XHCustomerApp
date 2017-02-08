@@ -10,7 +10,6 @@ import UIKit
 
 class SignInViewController: UIViewController {
     
-    
     @IBOutlet weak var topContainer: UIView!
     
     @IBOutlet weak var phoneTextField: UITextField!
@@ -51,7 +50,6 @@ class SignInViewController: UIViewController {
         let leftNavBar = UIBarButtonItem(title: "取消", style: .done, target: self, action: #selector(SignInViewController.back))
         
         self.navigationItem.leftBarButtonItem = leftNavBar
-        
         
     }
     
