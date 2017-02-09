@@ -100,14 +100,11 @@ class RecommendVC: BaseViewController {
         let nib1 = UINib(nibName: goodCellId, bundle: nil)
         tableView.register(nib1, forCellReuseIdentifier: goodCellId)
         
-//        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { 
-//            
-//            self.getList()
-//            
-//        })
+        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { 
+            self.getList()
+        })
         
-        //tableView.mj_footer.beginRefreshing()
-        getList()
+        tableView.mj_header.beginRefreshing()
     }
     
     var pageSize = 10
@@ -118,7 +115,7 @@ class RecommendVC: BaseViewController {
         
         //TODO:这里没给分页.
         NetworkManager.sharedManager.getGoodListWith(pageSize, pageNumber: pageNumber) { (success, json, error) in
-            //self.tableView.mj_footer.endRefreshing()
+            self.tableView.mj_header.endRefreshing()
             if success == true {
                 self.makeData(json: json!)
             }
@@ -133,7 +130,7 @@ class RecommendVC: BaseViewController {
     var goodList = [Good]()
     
     func makeData(json:JSON) {
-        
+        goodList.removeAll()
         if let datas = json.array {
             
             for data in datas {

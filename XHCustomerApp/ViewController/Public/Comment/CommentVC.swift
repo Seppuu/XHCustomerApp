@@ -19,6 +19,8 @@ class CommentVC: UIViewController {
     var tag0 = ["技术好","环境好","价格合理","顾问不错"]
     
     var tag1 = ["技术好差","环境好差","价格坑","顾问搓"]
+    
+    var isUploadComment = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +47,11 @@ class CommentVC: UIViewController {
         //TODO:submit
         let hud = showHudWith(self.view, animated: true, mode: .indeterminate, text: "")
         
-        hud.hide(true)
-        showAlert()
-        
+        hud.labelText = "评价成功!记得抽奖哟."
+        isUploadComment = true
+        updateBottomButtonColor()
+        hud.hide(true, afterDelay: 2.0)
+        //showAlert()
     }
     
     
@@ -57,11 +61,6 @@ class CommentVC: UIViewController {
         let cancelAction = UIAlertAction(title: "下次吧", style: .cancel, handler: nil)
         
         let confirmAction = UIAlertAction(title: "去抽奖", style: .default) { (action) in
-            
-            let webVC = BaseWebViewController()
-            webVC.title = "闲时优惠"
-            webVC.urlString = "https://kaifanfr.github.io/Lottery/"
-            self.navigationController?.pushViewController(webVC, animated: true)
             
         }
         
@@ -93,6 +92,8 @@ class CommentVC: UIViewController {
     }
     
     
+    var bottomButton = UIButton()
+    
     func setTableView() {
         
         tableView = UITableView(frame: view.bounds, style: .grouped)
@@ -106,8 +107,43 @@ class CommentVC: UIViewController {
         let nib1 = UINib(nibName: tagCell, bundle: nil)
         tableView.register(nib1, forCellReuseIdentifier: tagCell)
         
+        
+        let bottomContainer = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 44))
+        let frame = CGRect(x: 20, y: 0, width: bottomContainer.frame.size.width - 40, height: 44)
+        bottomButton = UIButton(frame: frame)
+        bottomContainer.addSubview(bottomButton)
+        bottomButton.setTitle("抽奖", for: .normal)
+        bottomButton.setTitleColor(UIColor.white, for: .normal)
+        bottomButton.backgroundColor = colorNoTap
+        bottomButton.layer.cornerRadius = 5.0
+        bottomButton.layer.masksToBounds = true
+        bottomButton.addTarget(self, action: #selector(CommentVC.bottomTap), for: .touchUpInside)
+        tableView.tableFooterView = bottomContainer
     }
+    
+    var colorNoTap = UIColor.init(hexString: "C5D7EC")
+    
+    var colorCouldTap = UIColor.init(hexString: "5292DE")
 
+    func bottomTap() {
+        
+        if isUploadComment == false {
+            DDAlert.alert(title: "提示", message: "评价完成之后,进行抽奖", dismissTitle: "好的", inViewController: self, withDismissAction: nil)
+            return
+        }
+        
+        let webVC = BaseWebViewController()
+        webVC.title = "闲时优惠"
+        webVC.urlString = "https://kaifanfr.github.io/Lottery/"
+        self.navigationController?.pushViewController(webVC, animated: true)
+        
+        
+    }
+    
+    func updateBottomButtonColor() {
+        
+        bottomButton.backgroundColor = colorCouldTap
+    }
     
 
 }
@@ -145,9 +181,11 @@ extension CommentVC:UITableViewDelegate,UITableViewDataSource {
             cell.tagList = tags0
             
             cell.starView.didTouchCosmos = {
+                
                 (rating) in
                 
                 if rating >= 3 {
+                    
                     cell.tagList = self.tags0
                 }
                 else {
@@ -156,11 +194,8 @@ extension CommentVC:UITableViewDelegate,UITableViewDataSource {
                 
             }
             
-            
             return cell
-            
         }
-        
     }
     
     
