@@ -49,13 +49,13 @@ class RecommendVC: BaseViewController {
         tableView.reloadData()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         if let navigationController = navigationController as? ScrollingNavigationController {
             navigationController.stopFollowingScrollView()
         }
     }
+    
     
     func setNavBatItem() {
         
@@ -142,6 +142,14 @@ class RecommendVC: BaseViewController {
                 
                 if let title = data["fullname"].string {
                     good.title = title
+                }
+                
+                if let id = data["project_id"].string {
+                    good.id = id
+                }
+                
+                if let agentId = data["agent_id"].string {
+                    good.agentId = agentId
                 }
                 
                 if let summary = data["summary"].string {
@@ -277,9 +285,9 @@ extension RecommendVC:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.section == 3 {
-            
+            let good = goodList[indexPath.row]
             let vc = GoodViewController()
-            
+            vc.good = good
             navigationController?.pushViewController(vc, animated: true)
         }
     }

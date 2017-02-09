@@ -136,6 +136,7 @@ var getGoodListUrl:String {
     return  BaseUrl + "getprojectlist"
 }
 
+//获取套餐详情
 var getGoodDetailUrl:String {
     return  BaseUrl + "getprojectdetail"
 }

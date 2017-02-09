@@ -28,6 +28,19 @@ class Good {
     var projects:[Project]!
     
     var notes:[GoodNote]!
+    
+    var agentId = ""
+    
+    var projectToatalPrice:Int {
+        
+        var price = 0
+        
+        for p in projects {
+            price += p.price
+        }
+        
+        return price
+    }
 
     
     init(id:String,title:String,desc:String,summary:String,type:[String],retailPrice:Int,imageUrls:[String],notes:[GoodNote],projects:[Project]) {

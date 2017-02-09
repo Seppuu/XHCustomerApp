@@ -7,16 +7,14 @@
 //
 
 import UIKit
+import MJRefresh
+import SwiftyJSON
 
 class GoodViewController: UIViewController {
     
     var tableView:UITableView!
     
-    var good = Good() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var good = Good()
     
     var imageCellId = "GoodImageCell"
     
@@ -45,11 +43,157 @@ class GoodViewController: UIViewController {
             tableView.register(nib, forCellReuseIdentifier: id)
         }
         
-        makeData()
+        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { 
+            
+            [weak self] in
+            
+            if let strongSelf = self {
+                strongSelf.getData()
+                
+            }
+            
+        })
+        
+        tableView.mj_header.beginRefreshing()
         
     }
     
-    func makeData() {
+    func getData() {
+        
+        
+        NetworkManager.sharedManager.getGoodDetailWith(good.agentId, goodId: good.id) { (success, json, error) in
+            
+            self.tableView.mj_header.endRefreshing()
+            
+            if success == true {
+                
+                self.makeData(json!)
+                
+            }
+            else {
+                
+            }
+        }
+        
+        
+    }
+    
+    func makeData(_ json:JSON) {
+        
+        var good = Good()
+        
+        var noteTitles = [String]()
+        
+        var notes = [GoodNote]()
+        
+        if let notesData = json["project_note"].array {
+            
+            for note in notesData {
+                let n = GoodNote()
+                
+                if let noteTitle = note["title"].string {
+                    n.title = noteTitle
+                    noteTitles.append(noteTitle)
+                }
+                
+                if let noteDesc = note["content"].string {
+                    n.content = noteDesc
+                }
+                
+                notes.append(n)
+                
+            }
+            
+        }
+        
+        var projects = [Project]()
+        
+        var projectsTotalPrice = 0
+        
+        
+        if let projectsData = json["project_detail"].array {
+            
+            for project in projectsData {
+                
+                var p = Project()
+                
+                if let id = project["project_id"].string {
+                    p.id = id
+                }
+                
+                if let title = project["name"].string {
+                    p.title = title
+                }
+                
+                if let price = project["price"].string {
+                    p.price = price.toInt()!
+                    projectsTotalPrice += price.toInt()!
+                }
+                
+                if let amount = project["qty"].string {
+                    p.amount = amount.toInt()!
+                }
+                
+                if let unit = project["unit"].string {
+                    p.spec = unit
+                }
+                
+                projects.append(p)
+                
+            }
+        }
+        
+        
+        let p = Project(id: "", title: "", price: projectsTotalPrice, amount: 0, spec: "总价值")
+        projects.append(p)
+        
+        
+        if let retail_price = json["retail_price"].string {
+            let price = retail_price.toInt()!
+            let p2 = Project(id: "", title: "", price: price, amount: 0, spec: "优惠价")
+            projects.append(p2)
+        }
+        
+        
+        if let id = json["project_id"].string {
+            good.id = id
+        }
+        
+        if let title = json["fullname"].string {
+            good.title = title
+        }
+        
+        if let actualProfile = json["description"].string {
+             good.desc = actualProfile
+        }
+        
+        if let summary = json["summary"].string {
+            good.summary = summary
+        }
+        
+        if let retailPrice = json["retail_price"].string {
+            good.retailPrice = retailPrice.toInt()!
+        }
+        
+        if let imageUrls = json["images_url"].array {
+            
+            for data in imageUrls {
+                if let url = data.string {
+                    good.imageUrls.append(url)
+                }
+            }
+        }
+        
+        good.notes = notes
+        good.projects = projects
+       
+        self.good = good
+        
+        self.tableView.reloadData()
+        
+    }
+    
+    func makeDataff(_ json:JSON) {
         
         var noteTitles = ["有效期","不可用日期","温馨提示","预约信息","适用人群"]
         
@@ -152,7 +296,7 @@ extension GoodViewController:UITableViewDataSource {
             view.backgroundColor = UIColor.white
             let priceNowLabel = UILabel()
             view.addSubview(priceNowLabel)
-            priceNowLabel.text = "¥ 580"
+            priceNowLabel.text = "¥ \(String(good.retailPrice))"
             priceNowLabel.font = UIFont.systemFont(ofSize: 20)
             priceNowLabel.textColor = UIColor.init(hexString: "21D3AB")
             priceNowLabel.snp.makeConstraints({ (make) in
@@ -163,7 +307,7 @@ extension GoodViewController:UITableViewDataSource {
             
             let priceOldLabel = UILabel()
             view.addSubview(priceOldLabel)
-            priceOldLabel.text = "门市价 ¥\(String(good.retailPrice))"
+            priceOldLabel.text = "门市价 ¥\(String(good.projectToatalPrice))"
             priceOldLabel.font = UIFont.systemFont(ofSize: 14)
             priceOldLabel.textColor = UIColor.init(hexString: "9E9E9E")
             priceOldLabel.snp.makeConstraints({ (make) in

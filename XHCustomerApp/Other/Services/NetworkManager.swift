@@ -410,6 +410,22 @@ extension NetworkManager {
         baseRequestWith(urlString, dict: dict, completion: completion)
     }
     
+    func getGoodDetailWith(_ agentId:String,goodId:String,completion:@escaping DDResultHandler) {
+        
+        let urlString = getGoodDetailUrl
+        
+        let sign = (agentId + "-" + goodId + "-" + XHPublicKey).md5()
+        
+        let dict:JSONDictionary = [
+            "sign":sign,
+            "project_id":goodId,
+            "agent_id":agentId
+        ]
+        
+        baseRequestWith(urlString, dict: dict, completion: completion)
+        
+    }
+    
     
     //详细的消费记录
     func getCustomerConsumeListWith(_ id:Int,pageSize:Int,pageNumber:Int,completion:@escaping DDResultHandler) {
